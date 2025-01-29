@@ -1,0 +1,143 @@
+/* Navbar - participants page */
+/* Navbar - participants page */
+.participants-page-container{
+  font-family: "Roboto", serif;
+
+}
+.participants-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white; /* White background */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Border shadow */
+  border-bottom: 1px solid #ddd; /* Optional: Light border at the bottom */
+   /* Space between heading and search */
+}
+
+.navbar-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-right: 20px; /* Add spacing between heading and search bar */
+  white-space: nowrap; 
+  margin-left: 120px;
+  color: #033672;
+  /* Prevent the heading from breaking into multiple lines */
+}
+
+.search-container {
+  display: flex;
+  flex: 1; /* Allow the search bar container to grow */
+  justify-content: flex-end; /* Align the search bar to the right */
+}
+.search-bar-wrapper{
+  display: flex;
+  align-items: center;
+  
+}
+
+.search-bar-wrapper p{
+  margin-right: 10px;
+  font-size: 18px;
+} 
+.search-bar {
+  width: 250px; /* Fixed width for the search bar */
+  max-width: 100%; /* Ensure it doesn't exceed its container */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+  
+}
+
+.search-bar:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+.search-bar:focus {
+  outline: none;
+  border-color: #007bff;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Position the icon inside the left edge of the input */
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #aaa;
+  pointer-events: none; /* Prevent the icon from interfering with input clicks */
+}
+
+/* For responsive design */
+@media (max-width: 768px) {
+  .participants-navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px; /* Adjust padding for small screens */
+  }
+
+  .search-bar {
+    width: 100%; /* Full width on small screens */
+    margin-top: 10px;
+    margin-left: 0; /* Remove left margin */
+  }
+  
+}
+
+/* If you want to apply other general styles for body and layout */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* For overall page container and participants list */
+.participants-container {
+  padding: 20px;
+  margin-left: 140px; /* Adjusted for sidebar */
+}
+
+.participants-header {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.participants-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  cursor:pointer;
+
+}
+
+.participant-card {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+
+}
+.participant-card p{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.participant-card:hover{
+  transform: translateY(-8px);
+}
+
+.no-participants {
+  color: #555;
+  font-size: 1rem;
+  text-align: center;
+  padding: 20px;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}

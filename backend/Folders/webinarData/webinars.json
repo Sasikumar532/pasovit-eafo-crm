@@ -1,0 +1,76 @@
+[
+  {
+    "webinarId": "00001",
+    "webinarNumber": 1,
+    "id": "f0fea90e-ec12-4eb3-b1a6-6c800b42e656",
+    "title": "Advancements in Medical Oncology: Innovations in Cancer Treatment",
+    "titleRussian": "Достижения в медицинской онкологии: Инновации в лечении рака",
+    "date": "2025-01-29",
+    "time": "00:05",
+    "liveEmbed": "https://kinescope.io/embed/82LqdaoT1ugEq3BuZR4vme",
+    "recordingEmbed": "",
+    "chatEmbed": "https://kinescope.io/chat/82LqdaoT1ugEq3BuZR4vme",
+    "bannerUrl": "https://static.wixstatic.com/media/df6cc5_bbf95777ee19434597595eaccf19fde4~mv2.jpg",
+    "chiefGuestName": "Dr. Elena Petrova, Leading Researcher in Cancer Immunotherapy",
+    "chiefGuestNameRussian": "Доктор Елена Петрова, Ведущий исследователь в области иммунотерапии рака",
+    "photoUrl": "",
+    "description": "",
+    "descriptionRussian": "",
+    "participants": [
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-28T18:18:50.128Z"
+      }
+    ]
+  },
+  {
+    "webinarId": "00002",
+    "webinarNumber": 2,
+    "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
+    "title": "DEMO1",
+    "titleRussian": "DEMO1",
+    "date": "2025-01-31",
+    "time": "11:01",
+    "liveEmbed": "",
+    "recordingEmbed": "",
+    "chatEmbed": "",
+    "bannerUrl": "",
+    "chiefGuestName": "DEMO1 name en",
+    "chiefGuestNameRussian": "DEMO1 name ru",
+    "photoUrl": "",
+    "dayOfWeek": "Friday",
+    "regalia": "demo 1 regalia en",
+    "regaliaRussian": "demo 1 regalia ru",
+    "dayOfWeekRussian": "Пятница",
+    "participants": [
+      {
+        "email": "eafofb@gmail.com",
+        "registered at": "2025-01-29T08:49:21.760Z"
+      },
+      {
+        "email": "sethuinstituteoftechnology2022@gmail.com",
+        "registered at": "2025-01-29T08:52:36.767Z"
+      },
+      {
+        "email": "sethuinstituteoftechnology2022@gmail.com",
+        "registered at": "2025-01-29T09:32:13.244Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:16:09.941Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:22:46.714Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:27:34.055Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:28:15.478Z"
+      }
+    ]
+  }
+]

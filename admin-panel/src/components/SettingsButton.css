@@ -1,0 +1,159 @@
+/* Settings button styles */
+.settings-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's on top of other elements */
+    background-color: #007bff; /* Background color for the button */
+    padding: 12px; /* Increased padding to make the button larger */
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .settings-button:hover {
+    transform: scale(1.1); /* Hover effect to enlarge the button */
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .settings-icon {
+    font-size: 28px; /* Larger icon size for visibility */
+    color: white;
+  }
+  
+  /* Remove the text in the Settings Button */
+  .settings-text {
+    display: none; /* Do not show text */
+  }
+  
+  /* Popup styles */
+  .popup {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    width: 450px;
+    border-radius: 8px;
+    z-index: 1001; /* Ensure popup is above other content */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .popup-content  h3{
+    font-size: 20px;
+    padding: 10px;
+  }
+  
+  .question {
+    margin-bottom: 20px;
+  }
+  
+  .question label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  /* Toggle Switch Background */
+  .toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .switch-background {
+    width: 70px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 15px;
+    position: relative;
+    transition: background-color 0.3s ease;
+  }
+  
+  .switch {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transition: transform 0.3s ease;
+  }
+  
+  /* ON - Green (right) */
+  .switch.right {
+    transform: translateX(40px);
+    background-color: #4caf50; /* Green */
+  }
+  
+  /* OFF - Red (left) */
+  .switch.left {
+    transform: translateX(0);
+    background-color: #ff5e5e; /* Red */
+  }
+  
+  .switch-background.right {
+    background-color: #4caf50; /* Green background for 'ON' */
+  }
+  
+  .switch-background.left {
+    background-color: #ff5e5e; /* Red background for 'OFF' */
+  }
+  
+  /* Label for the toggles */
+  .toggle-label {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #777;
+    transition: color 0.3s ease;
+  }
+  
+  .toggle-label.active {
+    color: #007bff;
+  }
+  
+  /* Border Separator Between Two Questions */
+  .border-separator {
+    border-bottom: 1px solid #ccc;
+    margin: 15px 0;
+  }
+  
+  /* Popup footer (if needed) */
+  .popup-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-btn {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .close-btn:hover {
+    background-color: #c82333;
+  }
+  

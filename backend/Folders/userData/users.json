@@ -1,0 +1,106 @@
+[
+  {
+    "email": "sasinarayanan2003@gmail.com",
+    "password": "$2a$10$xT8vZRs5BBHW0MJU7IM9Eev1.xsUZywSsptP0vNM9fFRi6JvR3Ao6",
+    "role": "user",
+    "country": "India",
+    "title": "Mr.",
+    "firstName": "Sasikumar",
+    "middleName": "",
+    "lastName": "N",
+    "confirmPassword": "Sasikumar@2003",
+    "phone": "916382522736",
+    "dob": "2003-04-01",
+    "university": "Pasovit Technologies",
+    "department": "Information Technology",
+    "profession": "Employee",
+    "position": "Developer",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "registeredAt": "2025-01-29T07:50:46.229Z",
+    "webinar": [
+      {
+        "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
+        "title": "DEMO1",
+        "registered": true
+      }
+    ]
+  },
+  {
+    "email": "workwithsk2@gmail.com",
+    "password": "$2a$10$St/1OuqIevZ9rohDlW1VtOh1EvECrSyJeEXETwkMkSX2EcEZVCiOy",
+    "role": "user",
+    "country": "Russia",
+    "title": "Mr.",
+    "firstName": "Sasikumar",
+    "middleName": "",
+    "lastName": "N",
+    "confirmPassword": "Sasikumar@2003",
+    "phone": "916382522736",
+    "dob": "2003-04-01",
+    "university": "Pasovit Technologies",
+    "department": "Information Technology",
+    "profession": "Employee",
+    "position": "Fullstack Developer",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "registeredAt": "2025-01-29T07:55:18.263Z"
+  },
+  {
+    "email": "eafofb@gmail.com",
+    "password": "$2a$10$jY9RbJRcKG9nCGnzCjyiMuIF3NCQUeSizDaejkXzv5caL5hw7lIV6",
+    "role": "user",
+    "country": "India",
+    "title": "Mr.",
+    "firstName": "Sasikumar",
+    "middleName": "",
+    "lastName": "N",
+    "confirmPassword": "Sasikumar@2003",
+    "phone": "916382522736",
+    "dob": "2003-04-01",
+    "university": "Pasovit Technologies",
+    "department": "Information Technology",
+    "profession": "Employee",
+    "position": "Developer",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "registeredAt": "2025-01-29T08:02:50.932Z",
+    "webinar": [
+      {
+        "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
+        "title": "DEMO1",
+        "registered": true
+      }
+    ]
+  },
+  {
+    "email": "sethuinstituteoftechnology2022@gmail.com",
+    "password": "$2a$10$APUOeHsJ.csSsJObnm5/Z.5BYtOi47G3DfMzd5Oc1uj68TUM1ktbS",
+    "role": "user",
+    "country": "India",
+    "title": "Mr.",
+    "firstName": "Sasikumar",
+    "middleName": "",
+    "lastName": "N",
+    "phone": "916382522736",
+    "dob": "2003-04-01",
+    "university": "Pasovit",
+    "department": "Information Technology",
+    "profession": "Employee",
+    "position": "Developer",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "registeredAt": "2025-01-29T08:51:36.266Z",
+    "webinar": [
+      {
+        "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
+        "title": "DEMO1",
+        "registered": true
+      }
+    ]
+  }
+]

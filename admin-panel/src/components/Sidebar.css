@@ -1,0 +1,139 @@
+/* Sidebar Styling */
+.sidebar {
+  width: 120px; /* Initial collapsed width */
+  height: 100vh;
+  background-color: #033672; /* Main background color */
+  transition: width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); /* Smooth expand/collapse */
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.company-name{
+  color: white;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 18px;
+}
+
+.sidebar.expanded {
+  width: 250px; /* Expanded width */
+}
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px; /* Padding for better spacing at the bottom */
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white; /* White color for text */
+  padding: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+  margin-bottom: 20px; /* Increased margin for more space between links */
+}
+
+.sidebar-item:hover {
+  background-color: #cd1719; /* Hover background color */
+  padding-left: 20px; /* Adds space when hovering */
+}
+
+.sidebar-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.sidebar-label {
+  font-size: 18px;
+  color: white; /* White color for labels */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar.expanded .sidebar-label {
+  opacity: 1; /* Show label when sidebar is expanded */
+}
+
+.sidebar.collapsed .sidebar-item {
+  justify-content: center; /* Centers the icons */
+}
+
+.sidebar.collapsed .sidebar-icon {
+  margin-right: 0; /* Removes spacing for labels */
+}
+
+.sidebar .hidden {
+  display: none;
+}
+
+/* Hover effects */
+.sidebar:hover .sidebar-icon {
+  transform: scale(1.1); /* Slightly enlarge icons on hover */
+}
+
+/* Active state styling for the sidebar items */
+.sidebar-item.active {
+  background-color: #cd1719; /* Highlight active items with the same red color */
+  padding-left: 20px;
+}
+
+/* Accessibility: Focus styles for keyboard navigation */
+.sidebar-item:focus {
+  outline: none;
+  background-color: #cd1719;
+  padding-left: 20px;
+}
+
+/* Optional - Adding scrollbar styling */
+.sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: #cd1719 #033672; /* Thumb and track colors */
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #cd1719;
+  border-radius: 10px;
+}
+
+/* Footer Settings Link */
+.sidebar-footer {
+  margin-top: auto; /* Push settings link to the bottom */
+  padding: 15px;
+
+}
+.sidebar-logout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.sidebar-logout .sidebar-logout-btn{
+  background: #fff;
+  color: #cd1719;
+  font-size: 20px;
+  font-weight: bolder;
+  
+}
+.sidebar.expanded .sidebar-logout-icon{
+  
+  margin-right: 8px;
+  margin-bottom: -3px;
+}

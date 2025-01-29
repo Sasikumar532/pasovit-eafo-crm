@@ -1,0 +1,229 @@
+/* WebinarDashboard.css */
+
+/* Container Styling */
+.webinar-dashboard-container {
+    margin: 0 auto;
+    margin-left: 120px;
+    font-family: "Roboto", serif;
+
+}
+
+/* Header */
+
+.webinardashboard-fixed-navbar{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #033672;
+    padding: 20px;
+    display: flex;
+    background-color: #fff;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+.dashboard-header {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Webinar Grid */
+.webinar-dashboard-container .webinar-grid {
+    gap: 20px;
+    width: 100%;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Webinar Card */
+.webinar-dashboard-webinar-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 1px 1px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.webinar-dashboard-webinar-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Webinar Details Section */
+.webinar-details-container {
+    display: flex;
+    flex: 2;
+    gap: 10px; /* Space between image and info */
+}
+
+.webinar-image {
+    display: flex;
+    flex: 0.3;
+    align-items: center;
+    justify-content: start;
+    margin-left: 10px;
+    
+}
+
+.webinar-image img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    
+}
+
+/* Webinar Info */
+.webinar-info {
+    padding: 10px 20px;
+    color: #000;
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Space between title and details */
+}
+
+.webinar-title {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    color: #033672;
+    margin-left: 10px;
+}
+
+.webinar-info p {
+    font-size: 1.2rem;
+    color: #555;
+}
+.webinar-time{
+    max-width: 300px;
+}
+
+/* Stats Section */
+.webinar-stats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #e6e6e6;
+    border-radius: 8px;
+    padding: 10px 20px;
+     /* Adjust size ratio for stats */
+}
+
+.stats-box {
+    text-align: center;
+}
+
+.stats-number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.stats-label {
+    font-size: 1rem;
+    color: #666;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .dashboard-container {
+        margin-left: 50px;
+    }
+
+    .webinar-dashboard-webinar-card {
+        flex: 1 1 calc(100% - 20px); /* Single card per row */
+    }
+
+    .webinar-image img {
+        max-width: 200px;
+        max-height: 120px;
+    }
+
+    .webinar-title {
+        font-size: 1.4rem;
+    }
+
+    .stats-number {
+        font-size: 1.3rem;
+    }
+
+    .stats-label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-container {
+        margin-left: 20px;
+    }
+
+    .dashboard-header {
+        font-size: 1.8rem;
+    }
+
+    .webinar-dashboard-webinar-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .webinar-details-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .webinar-stats-container {
+        width: 100%;
+        text-align: center;
+        flex: none;
+    }
+
+    .webinar-title {
+        font-size: 1.3rem;
+    }
+
+    .stats-number {
+        font-size: 1.2rem;
+    }
+
+    .stats-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .webinar-card {
+        padding: 10px;
+    }
+
+    .webinar-image img {
+        max-width: 150px;
+        max-height: 100px;
+    }
+
+    .webinar-title {
+        font-size: 1.2rem;
+    }
+
+    .stats-number {
+        font-size: 1.1rem;
+    }
+
+    .stats-label {
+        font-size: 0.65rem;
+    }
+}

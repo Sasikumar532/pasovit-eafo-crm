@@ -1,0 +1,26 @@
+# Node.js dependencies
+node_modules/
+
+# Build output directories
+build/
+dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Environment variable files (for sensitive data)
+.env
+.env.local
+.env.development
+.env.production
+
+# Log files
+*.log
+
+# IDE/Editor directories
+.idea/
+.vscode/
+
+# Test folder (if you have one for testing purposes)
+test/

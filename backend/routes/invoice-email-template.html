@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .email-header {
+      background-color: #007bff;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .email-header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .email-body {
+      padding: 20px 30px;
+      color: #333333;
+      line-height: 1.6;
+    }
+    .email-body h2 {
+      margin: 0 0 10px;
+      color: #007bff;
+    }
+    .email-body p {
+      margin: 8px 0;
+    }
+    .email-details {
+      margin: 20px 0;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      background-color: #f9f9f9;
+    }
+    .email-details table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .email-details th, .email-details td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .email-details th {
+      background-color: #007bff;
+      color: #ffffff;
+    }
+    .email-footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      background-color: #f5f5f5;
+      color: #666666;
+    }
+    .email-footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <!-- Header -->
+    <div class="email-header">
+      <h1>Invoice</h1>
+    </div>
+
+    <!-- Body -->
+    <div class="email-body">
+      <h2>Hello, [User's Name]</h2>
+      <p>Thank you for enrolling in our course. Below are your invoice details:</p>
+
+      <div class="email-details">
+        <table>
+          <tr>
+            <th>Course</th>
+            <td>[Course Name]</td>
+          </tr>
+          <tr>
+            <th>Price</th>
+            <td>[Course Price]</td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td>[User's Email]</td>
+          </tr>
+          <tr>
+            <th>Phone</th>
+            <td>[User's Phone Number]</td>
+          </tr>
+        </table>
+      </div>
+
+      <p>If you have any questions or need further assistance, feel free to contact us at [Support Email].</p>
+      <p>Thank you for choosing us!</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="email-footer">
+      <p>&copy; 2025 [Your Company Name]. All rights reserved.</p>
+      <p>
+        <a href="[Website Link]">Visit our website</a> | 
+        <a href="mailto:[Support Email]">Contact Support</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
