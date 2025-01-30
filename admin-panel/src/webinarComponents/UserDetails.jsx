@@ -4,6 +4,7 @@ import "./UserDetails.css";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
+
 // Translation file
 const translations = {
   English: {
@@ -67,6 +68,8 @@ const translations = {
 };
 
 const UserDetails = ({ selectedLanguage = "English" }) => {
+
+  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { email } = useParams();
   const [userDetails, setUserDetails] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
@@ -85,7 +88,7 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
   // Fetch user details
   const fetchUserDetails = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${email}`, {
+      const response = await fetch(`${baseUrl}/api/user/${email}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();
@@ -118,7 +121,7 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
   
     for (const webinar of webinars) {
       try {
-        const response = await fetch(`http://localhost:5000/api/webinars/${webinar.id}`, {
+        const response = await fetch(`${baseUrl}/api/webinars/${webinar.id}`, {
           method: 'GET',  // HTTP method (default is GET)
           headers: {
             'Authorization': `Bearer ${token}`,  // Include token in the Authorization header
@@ -170,7 +173,7 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
 
     if (Object.keys(changedData).length > 0) {
       try {
-        const response = await fetch(`http://localhost:5000/api/user/${email}`, {
+        const response = await fetch(`${baseUrl}/api/user/${email}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -200,7 +203,7 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
 
   const deleteUser = async (email) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${email}`, {
+      const response = await fetch(`${baseUrl}/api/user/${email}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${token}`, // Pass the JWT token for authentication

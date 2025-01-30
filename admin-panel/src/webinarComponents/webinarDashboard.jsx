@@ -7,13 +7,14 @@ import { toast, ToastContainer } from "react-toastify";
 const WebinarDashboard = ({ selectedLanguage }) => {
   const [webinars, setWebinars] = useState([]);
   const navigate = useNavigate();
+  const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const fetchWebinars = async () => {
     try {
       // Retrieve the token from localStorage or context (depending on where you store it)
       const token = localStorage.getItem('token'); // Or from context/store if applicable
   
-      const response = await fetch("http://localhost:5000/api/webinars", {
+      const response = await fetch(`${baseUrl}/api/webinars`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Add token to the Authorization header

@@ -21,6 +21,8 @@ const ForgetPasswordPage = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
   const updateColumns = () => {
     const width = window.innerWidth;
     if (width >= 1200) {
@@ -55,7 +57,7 @@ const ForgetPasswordPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/user/validate", {
+      const response = await axios.post(`${baseUrl}/api/user/validate`, {
         email,
         dob,
       });
@@ -87,7 +89,7 @@ const ForgetPasswordPage = () => {
 
     setLoading(true);
     try {
-      await axios.put("http://localhost:5000/api/user/update-password", {
+      await axios.put(`${baseUrl}/api/user/update-password`, {
         email,
         newPassword: password,
       });

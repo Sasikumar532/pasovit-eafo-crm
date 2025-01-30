@@ -93,6 +93,8 @@ const getDayOfWeekRussian = (date) => {
 
 
 const WebinarManagement = ({ selectedLanguage = "English" }) => {
+
+  const baseUrl = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
   const [webinars, setWebinars] = useState([]);
   const [formData, setFormData] = useState({
@@ -119,7 +121,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
     try {
       const token = localStorage.getItem('token'); // Retrieve the token from localStorage
   
-      const response = await fetch("http://localhost:5000/api/webinars", {
+      const response = await fetch(`${baseUrl}/api/webinars`, {
         method: "GET",  // HTTP method GET
         headers: {
           'Authorization': `Bearer ${token}`,  // Include the token in the Authorization header
@@ -186,7 +188,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
     try {
       let response;
       if (editingWebinar) {
-        response = await fetch(`http://localhost:5000/api/webinars/${editingWebinar.id}`, {
+        response = await fetch(`${baseUrl}/api/webinars/${editingWebinar.id}`, {
           method: "PUT",
           headers: { 'Authorization': `Bearer ${token}`, 
           "Content-Type": "application/json" },
@@ -195,7 +197,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
         if (!response.ok) throw new Error("Error updating webinar");
         toast.success(translations[selectedLanguage].webinarUpdated);
       } else {
-        response = await fetch("http://localhost:5000/api/webinars", {
+        response = await fetch(`${baseUrl}/api/webinars`, {
           method: "POST",
           headers: { 
             'Authorization': `Bearer ${token}`, 
@@ -258,7 +260,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
     try {
       const token = localStorage.getItem('token'); // Retrieve the token from localStorage
   
-      const response = await fetch(`http://localhost:5000/api/webinars/${id}`, {
+      const response = await fetch(`${baseUrl}/api/webinars/${id}`, {
         method: "DELETE",
         headers: {
           'Authorization': `Bearer ${token}`,  // Include the token in the Authorization header

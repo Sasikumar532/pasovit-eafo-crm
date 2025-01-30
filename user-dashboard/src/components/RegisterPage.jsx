@@ -48,6 +48,9 @@ const RegisterPage = () => {
 
   });
 
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
+
   const titleOptions = selectedLanguage === 'ru'
   ? [
       { value: "Respectful", label: "Уважаемый" },  // Respectful title for males
@@ -127,7 +130,7 @@ const RegisterPage = () => {
     setIsLoading(true);
   
     try {
-      const response = await fetch("http://localhost:5000/api/user", {
+      const response = await fetch(`${baseUrl}/api/user`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

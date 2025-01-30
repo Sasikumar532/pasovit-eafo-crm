@@ -25,6 +25,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const currentLanguage = i18n.language;
 
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
   const isTokenValid = (token) => {
     try {
       return jwtDecode(token).exp > Date.now() / 1000;
@@ -40,7 +42,7 @@ const Dashboard = () => {
       formData.append("profileImage", file);
       const token = localStorage.getItem("token");
       axios
-        .post("http://localhost:5000/api/user/upload-profile-image", formData, {
+        .post(`${baseUrl}/api/user/upload-profile-image`, formData, {
           headers: {
             "Content-Type": "multipart/form-data",
             Authorization: `Bearer ${token}`,
@@ -59,7 +61,7 @@ const Dashboard = () => {
     if (!token || !isTokenValid(token)) return navigate("/");
     const email = localStorage.getItem("email");
     axios
-      .get(`http://localhost:5000/api/user/${email}`, {
+      .get(`${baseUrl}/api/user/${email}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -81,7 +83,7 @@ const Dashboard = () => {
     }
 
     axios
-      .get("http://localhost:5000/api/webinars", {
+      .get(`${baseUrl}/api/webinars`, {
         headers: {
           Authorization: `Bearer ${token}`, // Attach the token to the Authorization header
         },
@@ -147,7 +149,7 @@ const Dashboard = () => {
 
     axios
       .put(
-        `http://localhost:5000/api/user/${localStorage.getItem("email")}`,
+        `${baseUrl}/api/user/${localStorage.getItem("email")}`,
         updatedFields,
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -174,7 +176,7 @@ const Dashboard = () => {
 
     axios
       .put(
-        `http://localhost:5000/api/user/${email}`,
+        `${baseUrl}/api/user/${email}`,
         {
           webinar: {
             id: webinarId,

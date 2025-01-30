@@ -18,9 +18,9 @@ router.use(
 
 // Admin credentials
 const adminCredentials = [
-  { email: "admin1@example.com", password: "password1" },
-  { email: "project@eafo.ru", password: "password2" },
-  { email: "tech.admin@eafo.info", password: "password3" },
+  { email: "admin@eafo.info", password: "$HSsX8QSWi+WQgw" },
+  { email: "project@eafo.ru", password: "sXUpb3=vzO5N{T8" },
+  { email: "tech.admin@eafo.info", password: "79m@3Zw50[%FF0" },
 ];
 
 // Helper to initialize JSON file if missing

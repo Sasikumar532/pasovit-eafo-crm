@@ -34,6 +34,8 @@ const translations = {
 };
 
 const WebinarParticipants = ({ selectedLanguage = "English" }) => {
+
+  const baseUrl = import.meta.env.VITE_BASE_URL;
   const { webinarId } = useParams();
   const [participants, setParticipants] = useState([]);
   const [webinarTitle, setWebinarTitle] = useState("");
@@ -46,7 +48,7 @@ const WebinarParticipants = ({ selectedLanguage = "English" }) => {
       // Get the token from localStorage or from the context (based on how you store it)
       const token = localStorage.getItem('token'); // Or get it from your state management or context
   
-      const response = await fetch(`http://localhost:5000/api/webinars/${webinarId}`, {
+      const response = await fetch(`${baseUrl}/api/webinars/${webinarId}`, {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${token}`, // Send the token in the Authorization header
@@ -74,7 +76,7 @@ const WebinarParticipants = ({ selectedLanguage = "English" }) => {
   // Fetch additional details for a participant
   const fetchUserDetails = async (email) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/user/${email}`, {
+      const response = await fetch(`${baseUrl}/api/user/${email}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await response.json();

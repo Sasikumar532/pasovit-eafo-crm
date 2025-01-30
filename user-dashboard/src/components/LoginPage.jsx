@@ -22,6 +22,9 @@ const LoginPage = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
+  const baseUrl = import.meta.env.VITE_BASE_URL;
+
+
   const updateColumns = () => {
     const width = window.innerWidth;
     if (width >= 1200) {
@@ -87,7 +90,7 @@ const LoginPage = () => {
 
     setLoading(true);
     try {
-      const response = await axios.post("http://localhost:5000/api/user/login", {
+      const response = await axios.post(`${baseUrl}/api/user/login`, {
         email,
         password,
       });

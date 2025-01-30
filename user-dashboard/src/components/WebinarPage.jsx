@@ -11,6 +11,9 @@ const capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
+const baseUrl = import.meta.env.VITE_BASE_URL;
+
+
 const WebinarPage = () => {
   const { webinarId } = useParams();
   const { t } = useTranslation(); // Use translation hook
@@ -30,7 +33,7 @@ const WebinarPage = () => {
   useEffect(() => {
     const fetchWebinarDetails = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/webinars/${webinarId}`, {
+        const response = await axios.get(`${baseUrl}/api/webinars/${webinarId}`, {
           headers: {
             Authorization: `Bearer ${token}`, // Add the token here
           },
