@@ -5,7 +5,7 @@
     "id": "f0fea90e-ec12-4eb3-b1a6-6c800b42e656",
     "title": "Advancements in Medical Oncology: Innovations in Cancer Treatment",
     "titleRussian": "Достижения в медицинской онкологии: Инновации в лечении рака",
-    "date": "2025-02-01",
+    "date": "2025-01-29",
     "time": "00:05",
     "liveEmbed": "https://kinescope.io/embed/82LqdaoT1ugEq3BuZR4vme",
     "recordingEmbed": "",
@@ -16,73 +16,66 @@
     "photoUrl": "",
     "description": "",
     "descriptionRussian": "",
-    "dayOfWeek": "Saturday",
-    "dayOfWeekRussian": "Суббота",
-    "regalia": "",
-    "regaliaRussian": "",
     "participants": [
       {
-        "email": "workwithsk2@gmail.com",
-        "registered at": "2025-01-30T09:39:41.091Z"
+        "email": "theva.prime@gmail.com",
+        "registered at": "2025-02-02T07:26:43.413Z"
       },
       {
-        "email": "workwithsk2@gmail.com",
-        "registered at": "2025-01-30T09:40:43.186Z"
-      },
-      {
-        "email": "sethucollege2023@gmail.com",
-        "registered at": "2025-01-30T10:09:09.604Z"
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-28T18:18:50.128Z"
       }
     ]
   },
   {
     "webinarId": "00002",
     "webinarNumber": 2,
-    "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
-    "title": "DEMO1",
-    "titleRussian": "DEMO1",
-    "date": "2025-01-31",
-    "time": "11:01",
-    "liveEmbed": "",
-    "recordingEmbed": "",
+    "id": "4bcd02e4-d940-4542-a86c-44c2ad75ac3d",
+    "title": "Molecular Diagnostic Markers in Malignant Neoplasms",
+    "titleRussian": "Молекулярно-диагностические маркеры в онкологии",
+    "date": "2025-02-11",
+    "dayOfWeek": "Tuesday",
+    "dayOfWeekRussian": "Вторник",
+    "time": "10:00",
+    "liveEmbed": "https://kinescope.io/embed/g1fRMgccSUYQBTpK3B6EnV",
+    "eventSiteURL": "http://basic.eafo.info/",
     "chatEmbed": "",
-    "bannerUrl": "",
-    "chiefGuestName": "DEMO1 name en",
-    "chiefGuestNameRussian": "DEMO1 name ru",
+    "bannerUrl": "https://static.wixstatic.com/media/df6cc5_a06d8b35fd8149e4a94747d5a337dc53~mv2.png",
+    "bannerRussianURL": "https://static.wixstatic.com/media/df6cc5_13f93e88ce08478a95a586f6887a1f61~mv2.png",
+    "chiefGuestName": "DRUY Aleksandr, MD, PhD",
+    "chiefGuestNameRussian": "ДРУЙ Александр Евгеньевич",
     "photoUrl": "",
-    "dayOfWeek": "Friday",
-    "regalia": "demo 1 regalia en",
-    "regaliaRussian": "demo 1 regalia ru",
-    "dayOfWeekRussian": "Пятница",
+    "regalia": "Chief, Laboratory of Molecular Oncology, Dmitry Rogachev National Medical Research Center for Pediatric Hematology, Oncology and Immunology, Moscow, Russia",
+    "regaliaRussian": "к.м.н., врач клинической лабораторной диагностики, \nзаведующий лабораторией молекулярной онкологии, \nНациональный медицинский исследовательский центр\nдетской гематологии, онкологии и иммунологии им. Дмитрия Рогачева, \nМосква, Российская Федерация",
     "participants": [
       {
-        "email": "workwithsk2@gmail.com",
-        "registered at": "2025-01-30T09:40:57.374Z"
+        "email": "eafofb@gmail.com",
+        "registered at": "2025-01-29T08:49:21.760Z"
       },
       {
-        "email": "sethucollege2023@gmail.com",
-        "registered at": "2025-01-30T10:09:39.613Z"
+        "email": "sethuinstituteoftechnology2022@gmail.com",
+        "registered at": "2025-01-29T08:52:36.767Z"
+      },
+      {
+        "email": "sethuinstituteoftechnology2022@gmail.com",
+        "registered at": "2025-01-29T09:32:13.244Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:16:09.941Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:22:46.714Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:27:34.055Z"
+      },
+      {
+        "email": "sasinarayanan2003@gmail.com",
+        "registered at": "2025-01-29T11:28:15.478Z"
       }
     ]
-  },
-  {
-    "webinarId": "00003",
-    "webinarNumber": 3,
-    "id": "aef6674a-e075-4df9-acfd-fd3538707d31",
-    "title": "ngjgf",
-    "titleRussian": "jfgjfgj",
-    "date": "2025-01-31",
-    "dayOfWeek": "Friday",
-    "dayOfWeekRussian": "Пятница",
-    "time": "14:10",
-    "liveEmbed": "",
-    "recordingEmbed": "",
-    "chatEmbed": "",
-    "bannerUrl": "",
-    "chiefGuestName": "fgjfgj",
-    "chiefGuestNameRussian": "fgjfgj",
-    "photoUrl": "",
-    "regalia": "fgjfgj",
-    "regaliaRussian": "fgjfg"
   }
 ]

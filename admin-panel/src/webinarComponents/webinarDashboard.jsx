@@ -78,43 +78,35 @@ const WebinarDashboard = ({ selectedLanguage }) => {
 
       {/* Webinars List */}
       <div className="webinar-grid">
-        {isLoading ? (
-          <div className="loading-spinner">Loading...</div>
-        ) : filteredWebinars.length === 0 ? (
-          <p>{selectedLanguage === "Russian" ? "Нет вебинаров" : "No webinars available"}</p>
-        ) : (
-          filteredWebinars.map((webinar) => (
-            <div
-              key={webinar.id}
-              className="webinar-dashboard-webinar-card"
-              onClick={() => handleWebinarClick(webinar.id)}
-            >
-              {/* Webinar Details */}
-
-
-            
-              <div className="webinar-details-container">
-                <div className="webinar-image">
-                  <img src={webinar.bannerUrl} alt={`${webinar.title} banner`} />
-                </div>
-                <div className="webinar-info">
-                  <h2 className="webinar-title">{selectedLanguage === "Russian" ? webinar.titleRussian : webinar.title}</h2>
-                  <div className="webinar-time" style={{ display: "flex" }}>
-                    <p className="webinar-details">
-                      <strong>
-                        {selectedLanguage === "Russian" ? "Дата:" : "Date:"}
-                      </strong>{" "}
-                      {webinar.date}
-                    </p>
-                    <p className="webinar-details">
-                      <strong>
-                        {selectedLanguage === "Russian" ? "Время:" : "Time:"}
-                      </strong>{" "}
-                      {webinar.time}
-                    </p>
-                  </div>
+        {webinars.map((webinar) => (
+          <div
+            key={webinar.id}
+            className="webinar-dashboard-webinar-card"
+            onClick={() => handleWebinarClick(webinar.id)}
+          >
+            {/* Webinar Details */}
+            <div className="webinar-details-container">
+              <div className="webinar-image">
+                <img src={webinar.bannerUrl} alt={`${webinar.title} banner`} />
+              </div>
+              <div className="webinar-info">
+                <h2 className="webinar-title">{webinar.title}</h2>
+                <div className="webinar-time" style={{ display: "flex" }}>
+                  <p className="webinar-details">
+                    <strong>
+                      {selectedLanguage === "Russian" ? "Дата:" : "Date:"}
+                    </strong>{" "}
+                    {webinar.date}
+                  </p>
+                  <p className="webinar-details">
+                    <strong>
+                      {selectedLanguage === "Russian" ? "Время:" : "Time:"}
+                    </strong>{" "}
+                    {webinar.time}
+                  </p>
                 </div>
               </div>
+            </div>
 
               {/* Registration Stats */}
               <div className="webinar-stats-container">
@@ -141,3 +133,4 @@ const WebinarDashboard = ({ selectedLanguage }) => {
 };
 
 export default WebinarDashboard;
+

@@ -1,7 +1,7 @@
 [
   {
-    "email": "workwithsk2@gmail.com",
-    "password": "$2a$10$St/1OuqIevZ9rohDlW1VtOh1EvECrSyJeEXETwkMkSX2EcEZVCiOy",
+    "email": "sasinarayanan2003@gmail.com",
+    "password": "$2a$10$xT8vZRs5BBHW0MJU7IM9Eev1.xsUZywSsptP0vNM9fFRi6JvR3Ao6",
     "role": "user",
     "country": "Russia",
     "title": "Mr.",
@@ -11,54 +11,15 @@
     "confirmPassword": "Sasikumar@2003",
     "phone": "916382522736",
     "dob": "2003-04-01",
-    "university": "Pasovit Technologies",
+    "university": "Pasovit",
     "department": "Information Technology",
     "profession": "Employee",
-    "position": "Fullstack Developer",
+    "position": "Developer",
     "gender": "Male",
     "agreePersonalData": true,
     "acceptTerms": true,
-    "registeredAt": "2025-01-29T07:55:18.263Z",
+    "registeredAt": "2025-01-29T07:50:46.229Z",
     "webinar": [
-      {
-        "id": "f0fea90e-ec12-4eb3-b1a6-6c800b42e656",
-        "title": "Advancements in Medical Oncology: Innovations in Cancer Treatment",
-        "registered": true
-      },
-      {
-        "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
-        "title": "DEMO1",
-        "registered": true
-      }
-    ]
-  },
-  {
-    "email": "sethucollege2023@gmail.com",
-    "password": "$2a$10$flk4/XsqS2S/vxvE5dFMf.jaI6gGhtdMY13MAk9VK38iY6BNkyRL2",
-    "role": "user",
-    "country": "Australia",
-    "title": "Mr.",
-    "firstName": "Sasikumar",
-    "middleName": "",
-    "lastName": "Narayanan",
-    "confirmPassword": "Sasikumar@2003",
-    "phone": "916382522736",
-    "dob": "2003-04-01",
-    "university": "Pasovit Technologies",
-    "department": "IT",
-    "profession": "Employee",
-    "position": "Fullstack Developer",
-    "gender": "Male",
-    "agreePersonalData": true,
-    "acceptTerms": true,
-    "dashboardLang": "en",
-    "registeredAt": "2025-01-30T06:22:49.815Z",
-    "webinar": [
-      {
-        "id": "f0fea90e-ec12-4eb3-b1a6-6c800b42e656",
-        "title": "Advancements in Medical Oncology: Innovations in Cancer Treatment",
-        "registered": true
-      },
       {
         "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
         "title": "DEMO1",
@@ -68,15 +29,15 @@
   },
   {
     "email": "sasinarayanan2003@gmail.com",
-    "password": "$2a$10$y.ger4qnRnIoh4kJenxfeup0qlsLH9UsmGJkG3qjBW2HvQWOtKkoO",
+    "password": "$2a$10$H/x60WJEx80gE8bOYw0yb.gziS6A0yx8AP1OaDy5xmaOhtKcpZk76",
     "role": "user",
-    "country": "Algeria",
+    "country": "IN",
     "title": "Mr.",
     "firstName": "Sasikumar",
     "middleName": "",
     "lastName": "N",
     "confirmEmail": "sasinarayanan2003@gmail.com",
-    "confirmPassword": "Sasi@2003",
+    "confirmPassword": "Sasikumar@2003",
     "phone": "916382522736",
     "dob": "2003-04-01",
     "university": "Pasovit Technologies",
@@ -86,8 +47,71 @@
     "gender": "Male",
     "agreePersonalData": true,
     "acceptTerms": true,
-    "dashboardLang": "en",
-    "registeredAt": "2025-01-31T09:30:53.697Z",
-    "webinar": []
+    "registeredAt": "2025-01-29T07:55:18.263Z"
+  },
+  {
+    "email": "eafofb@gmail.com",
+    "password": "$2a$10$jY9RbJRcKG9nCGnzCjyiMuIF3NCQUeSizDaejkXzv5caL5hw7lIV6",
+    "role": "user",
+    "country": "India",
+    "title": "Mr.",
+    "firstName": "Sasikumar",
+    "middleName": "",
+    "lastName": "N",
+    "confirmPassword": "Sasikumar@2003",
+    "phone": "916382522736",
+    "dob": "2003-04-01",
+    "university": "Pasovit Technologies",
+    "department": "Information Technology",
+    "profession": "Employee",
+    "position": "Developer",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "registeredAt": "2025-01-29T08:02:50.932Z",
+    "webinar": [
+      {
+        "id": "f0fea90e-ec12-4eb3-b1a6-6c800b42e656",
+        "title": "Advancements in Medical Oncology: Innovations in Cancer Treatment",
+        "registered": true
+      },
+      {
+        "id": "9e59dde3-650c-464c-962c-ecd4189fef78",
+        "title": "Introduction to Molecular Oncology",
+        "registered": true
+      },
+      {
+        "id": "4bcd02e4-d940-4542-a86c-44c2ad75ac3d",
+        "title": "Molecular Diagnostic Markers in Malignant Neoplasms",
+        "registered": true
+      }
+    ]
+  },
+  {
+    "email": "sethuinstituteoftechnology2022@gmail.com",
+    "password": "$2a$10$APUOeHsJ.csSsJObnm5/Z.5BYtOi47G3DfMzd5Oc1uj68TUM1ktbS",
+    "role": "user",
+    "country": "India",
+    "title": "Mr.",
+    "firstName": "Sasikumar",
+    "middleName": "",
+    "lastName": "N",
+    "phone": "916382522736",
+    "dob": "2003-04-01",
+    "university": "Pasovit",
+    "department": "Information Technology",
+    "profession": "Employee",
+    "position": "Fullstack Developer",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "registeredAt": "2025-01-29T08:51:36.266Z",
+    "webinar": [
+      {
+        "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
+        "title": "DEMO1",
+        "registered": true
+      }
+    ]
   }
 ]

@@ -6,6 +6,7 @@
   "english": "English",
   "russian": "Русский",
   "dashboard": {
+"timeZone":"(Timezone:Moscow, Russia (GMT+3))",
     "upload_image": "Upload Image",
     "events": "Events",
     "eventDetails": "Event Details",
@@ -84,7 +85,6 @@
     "dob": "Date of Birth",
     "gender": "Gender",
     "email": "Email",
-    "confirmEmail": "Confirm Email",
     "password": "Password",
     "confirmPassword": "Confirm Password",
     "phone": "Phone Number",
@@ -97,7 +97,6 @@
     "plh_lastName":"Enter your last name",
     "plh_middleName":"Enter your middle name",
     "plh_email":"Enter your  email",
-    "plh_confirmEmail": "Email and confirm mail are not matched",
     "plh_password":"Enter your password",
     "plh_confirmPassword":"Confirm your password",
     "plh_dob": "Select your date of birth",
@@ -109,7 +108,6 @@
     "register": "Register",
     "loginLink": "Already have an account? Sign in",
     "emailError": "Email is already registered.",
-    "confirmEmailError": "Emails do not match!",
     "passwordError": "Password must be 8-16 characters, include one uppercase letter, one number, and one special character.",
     "confirmPasswordError": "Passwords do not match.",
     "signIn": "Sign in",
@@ -191,9 +189,10 @@
     "closePopup": "Close Popup",
     "title": "Contact Us",
     "enquiry": "Enquiry:",
-    "technicalComplaints": "Technical Complaints:",
+    "technicalComplaints": "Technical support:",
     "phone": "Phone:"
   }
   
   
 }
+

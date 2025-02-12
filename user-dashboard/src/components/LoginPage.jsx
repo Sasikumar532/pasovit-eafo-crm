@@ -103,7 +103,10 @@ const LoginPage = () => {
       setIsLoggedIn(true);
 
       toast.success(t("loginPage.login"), { ariaLive: "polite" });
-      navigate("/dashboard");
+      
+        setTimeout(() => {
+          navigate("/dashboard"); // Navigate to home page after timeout
+        }, 2000);
     } catch (error) {
       const errorMessage = error.response?.data?.message || t("loginPage.loginFailed");
       toast.error(errorMessage, { ariaLive: "polite" });

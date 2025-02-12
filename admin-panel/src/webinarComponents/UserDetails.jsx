@@ -338,3 +338,4 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
 };
 
 export default UserDetails;
+

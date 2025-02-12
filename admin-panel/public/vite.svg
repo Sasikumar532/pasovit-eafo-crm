@@ -1,1 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg data-bbox="17.982 4.5 108.186 135" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" height="144" width="144" data-type="ugc">
+    <g>
+        <mask height="66" width="50" y="4" x="72" maskUnits="userSpaceOnUse" style="mask-type:luminance" id="1bfa0a51-c7ff-430c-a247-2c4b22e27ee8" fill="none">
+            <path fill="#ffffff" d="M78.755 12.108c-4.145 4.606-6.209 10.218-6.209 16.837v40.77h20.146v-42.17c0-1.398.41-2.49 1.245-3.257.836-.768 1.86-1.16 3.054-1.16 1.194 0 2.218.392 3.053 1.16.836.767 1.246 1.86 1.246 3.258v6.414h-5.715v17.229h5.715v18.525h20.129v-40.07c0-8.41-2.542-14.858-7.609-19.327C109.409 6.445 103.797 4.5 96.99 4.5c-7.607 0-13.697 2.542-18.235 7.608Z"/>
+        </mask>
+        <g mask="url(#1bfa0a51-c7ff-430c-a247-2c4b22e27ee8)">
+            <path fill="url(#6c24b8d8-0a28-4a54-807a-6a84c35d9a97)" d="M121.436 4.5h-48.89v65.214h48.89V4.5Z"/>
+        </g>
+        <mask height="65" width="43" y="5" x="20" maskUnits="userSpaceOnUse" style="mask-type:luminance" id="e5d4a67c-66c1-4fab-a8ce-f2f18b6bad9b" fill="none">
+            <path fill="#ffffff" d="M52.417 5.9c-9.877 0-17.758 3.48-23.643 10.422-5.271 6.21-7.915 13.68-7.915 22.432 0 8.41 2.507 15.523 7.506 21.34 5.544 6.414 13.083 9.62 22.636 9.62h11.225V52.69h-9.809c-2.61 0-4.913-.87-6.909-2.61-1.671-1.466-2.712-3.07-3.104-4.81h19.839V30.344h-19.84c.325-2.405 1.877-4.316 4.607-5.766 2.729-1.433 5.68-2.15 8.819-2.15h6.414V5.9h-9.826Z"/>
+        </mask>
+        <g mask="url(#e5d4a67c-66c1-4fab-a8ce-f2f18b6bad9b)">
+            <path fill="url(#2bf5760f-342c-423f-a52b-a9772832dcdc)" d="M62.226 5.9H20.859v63.815h41.367V5.899Z"/>
+        </g>
+        <mask height="67" width="67" y="73" x="60" maskUnits="userSpaceOnUse" style="mask-type:luminance" id="7c014bed-eba6-40ae-9152-ae684ecbb364" fill="none">
+            <path fill="#ffffff" d="M85.5 115.857c-2.474-2.201-3.702-5.271-3.702-9.212 0-3.872 1.314-6.977 3.906-9.314 2.27-2.064 5.05-3.104 8.308-3.104 3.207 0 6.022 1.091 8.41 3.258 2.405 2.166 3.616 5.22 3.616 9.16 0 3.872-1.296 6.943-3.906 9.212-2.27 1.996-5.032 3.002-8.325 3.002-3.326 0-6.107-1.006-8.307-3.002ZM69.277 84.009c-5.544 6.14-8.307 13.22-8.307 21.237 0 9.945 3.343 18.202 10.013 24.735 6.482 6.346 14.33 9.519 23.54 9.519 8.547 0 15.899-3.037 22.04-9.11 6.414-6.345 9.621-14.26 9.621-23.745 0-10.15-2.9-18.201-8.717-24.138-5.817-5.936-13.698-8.921-23.643-8.921-10.098 0-18.27 3.463-24.547 10.423Z"/>
+        </mask>
+        <g mask="url(#7c014bed-eba6-40ae-9152-ae684ecbb364)">
+            <path fill="url(#a9c6186a-d9ab-4978-ae5b-82b5a577b1ef)" d="M126.168 73.586H60.954V139.5h65.214V73.586Z"/>
+        </g>
+        <mask height="66" width="45" y="73" x="17" maskUnits="userSpaceOnUse" style="mask-type:luminance" id="d8a2d1be-8d70-435f-8bd7-b70d9a471c9b" fill="none">
+            <path fill="#ffffff" d="M24.857 80.87C20.285 85.714 18 91.873 18 99.293v39.439h18.9v-16.581h6.295V105.11H36.9v-7.864c0-4.06 1.467-6.073 4.384-6.073 2.2 0 3.736 1.211 4.623 3.634l15.506-11.31c-5.168-6.619-11.565-9.911-19.225-9.911-6.994 0-12.76 2.422-17.331 7.284Z"/>
+        </mask>
+        <g mask="url(#d8a2d1be-8d70-435f-8bd7-b70d9a471c9b)">
+            <path fill="url(#3f4be885-d3f7-42ef-b461-406f180c28af)" d="M61.379 73.586H17.982v65.146h43.397V73.586Z"/>
+        </g>
+        <defs fill="none">
+            <linearGradient gradientUnits="userSpaceOnUse" y2="-6.413" x2="96.993" y1="80.588" x1="96.993" id="6c24b8d8-0a28-4a54-807a-6a84c35d9a97">
+                <stop stop-color="#040E2C"/>
+                <stop stop-color="#071646" offset=".409"/>
+                <stop stop-color="#0A1B5C" offset=".798"/>
+                <stop stop-color="#0A1D64" offset="1"/>
+            </linearGradient>
+            <linearGradient gradientUnits="userSpaceOnUse" y2="4.399" x2="41.547" y1="71.214" x1="41.547" id="2bf5760f-342c-423f-a52b-a9772832dcdc">
+                <stop stop-color="#040E2C"/>
+                <stop stop-color="#071646" offset=".409"/>
+                <stop stop-color="#0A1B5C" offset=".798"/>
+                <stop stop-color="#0A1D64" offset="1"/>
+            </linearGradient>
+            <linearGradient gradientUnits="userSpaceOnUse" y2="73.222" x2="93.564" y1="139.854" x1="93.564" id="a9c6186a-d9ab-4978-ae5b-82b5a577b1ef">
+                <stop stop-color="#040E2C"/>
+                <stop stop-color="#071646" offset=".409"/>
+                <stop stop-color="#0A1B5C" offset=".798"/>
+                <stop stop-color="#0A1D64" offset="1"/>
+            </linearGradient>
+            <linearGradient gradientUnits="userSpaceOnUse" y2="57.248" x2="39.688" y1="155.062" x1="39.688" id="3f4be885-d3f7-42ef-b461-406f180c28af">
+                <stop stop-color="#040E2C"/>
+                <stop stop-color="#071646" offset=".409"/>
+                <stop stop-color="#0A1B5C" offset=".798"/>
+                <stop stop-color="#0A1D64" offset="1"/>
+            </linearGradient>
+        </defs>
+    </g>
+</svg>

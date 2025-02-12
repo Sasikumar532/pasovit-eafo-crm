@@ -198,3 +198,4 @@ const WebinarParticipants = ({ selectedLanguage = "English" }) => {
 };
 
 export default WebinarParticipants;
+

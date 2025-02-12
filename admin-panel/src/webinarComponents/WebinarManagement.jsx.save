@@ -26,7 +26,6 @@ const translations = {
     eventSiteURL: "Website URL",
     chatEmbed:"Chat Embed URL",
     bannerUrl: "Banner URL",
-    bannerRussianURL: "Banner URL(Russian)",
     photoUrl: "Photo URL",
     updateWebinar: "Update Webinar",
     addWebinarForm: "Add Webinar",
@@ -56,8 +55,8 @@ const translations = {
     liveEmbed: "URL встраивания вживую",
     eventSiteURL: "URL-адрес веб-сайта",
     chatEmbed: "URL чата",
-    bannerUrl: "URL баннера",
-    bannerRussianURL: "URL Banner (Russian)",
+    bannerUrl: "URL баннера (English)",
+    bannerRussianUrl:""
     photoUrl: "Фото URL",
     updateWebinar: "Обновить вебинар",
     addWebinarForm: "Добавить вебинар",
@@ -112,7 +111,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
     eventSiteURL: "",
     chatEmbed: "",
     bannerUrl: "",
-    bannerRussianURL:"",
+    bannerRussianUrl: "",
     chiefGuestName: "",
     chiefGuestNameRussian: "",
     photoUrl: "",
@@ -163,7 +162,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
     e.preventDefault();
     const { 
       title, titleRussian, date,dayOfWeek, dayOfWeekRussian,time, liveEmbed, eventSiteURL, 
-      chatEmbed, bannerUrl, bannerRussianURL,chiefGuestName, chiefGuestNameRussian, photoUrl, 
+      chatEmbed, bannerUrl,bannerRussianUrl, chiefGuestName, chiefGuestNameRussian, photoUrl, 
       regalia, regaliaRussian 
     } = formData;
   
@@ -181,7 +180,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
       eventSiteURL: encodeURI(eventSiteURL.trim()),
       chatEmbed: encodeURI(chatEmbed.trim()),
       bannerUrl: encodeURI(bannerUrl.trim()),
-      bannerRussianURL: encodeURI(bannerRussianURL.trim()),
+      bannerRussianUrl: encodeURI(bannerRussianUrl.trim()),
       chiefGuestName: chiefGuestName.trim(),
       chiefGuestNameRussian: chiefGuestNameRussian.trim(),
       photoUrl: encodeURI(photoUrl.trim()),
@@ -227,7 +226,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
         eventSiteURL: "",
         chatEmbed: "",
         bannerUrl: "",
-       bannerRussianURL: "",
+        bannerRussianUrl: "",
         chiefGuestName: "",
         chiefGuestNameRussian: "",
         photoUrl: "",
@@ -254,7 +253,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
       eventSiteURL: decodeURIComponent(webinar.eventSiteURL),
       chatEmbed: decodeURIComponent(webinar.chatEmbed),
       bannerUrl: decodeURIComponent(webinar.bannerUrl || ""),
-      bannerRussianURL: decodeURIComponent(webinar.bannerRussianURL || ""),
+      bannerRussianUrl:decodeURIComponent(webinar.bannerRussianUrl || ""),
       chiefGuestName: webinar.chiefGuestName || "",
       chiefGuestNameRussian: webinar.chiefGuestNameRussian || "",
       photoUrl: decodeURIComponent(webinar.photoUrl || ""),
@@ -313,7 +312,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
               eventSiteURL: "",
               chatEmbed: "",
               bannerUrl: "",
-              bannerRussianURL: "",
+              bannerRussianUrl: "",
               chiefGuestName: "",
               chiefGuestNameRussian: "",
               photoUrl: "",
@@ -339,21 +338,23 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
       </div>
 
       <div className="webinar-list-container">
-        <ul className="webinar-list">
-          {webinars.map((webinar) => (
-            <li key={webinar.id} className="webinar-list-item">
-              <div className="webinar-first-div">
-                <div className="webinar-banner">
-                  <img src={webinar.bannerUrl} alt={webinar.title} />
-                </div>
-                <div className="webinar-details">
-                  <h3>{webinar.title}</h3>
-                  <p>
-                    <strong>{translations[selectedLanguage].date}:</strong> {formatDate(webinar.date)} <br />
-                    <strong>{translations[selectedLanguage].time}:</strong> {webinar.time}
-                  </p>
-                </div>
+       
+      <ul className="webinar-list">
+        {filteredWebinars.map((webinar) => (
+          <li key={webinar.id} className="webinar-list-item">
+            <div className="webinar-first-div">
+              <div className="webinar-banner">
+                <img src={selectedLanguage==="Russian" ? webinar.bannerRussianUrl : webinar.bannerUrl} alt={webinar.title} />
               </div>
+              <div className="webinar-details">
+                <h3>{selectedLanguage === "Russian" ? webinar.titleRussian : webinar.title}</h3>
+                
+                <p>
+                  <strong>{translations[selectedLanguage].date}:</strong> {formatDate(webinar.date)} <br />
+                  <strong>{translations[selectedLanguage].time}:</strong> {webinar.time}
+                </p>
+              </div>
+            </div>
 
             <div className="webinar-actions">
               <button onClick={() => handleEdit(webinar)} className="edit">{translations[selectedLanguage].edit}</button>
@@ -465,9 +466,9 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
                 />
                 <input
                   type="text"
-                  placeholder={translations[selectedLanguage].bannerRussianURL}
-                  value={formData.bannerRussianURL}
-                  onChange={(e) => setFormData({ ...formData, bannerRussianURL: e.target.value })}
+                  placeholder={translations[selectedLanguage].bannerRussianUrl}
+                  value={formData.bannerRussianUrl}
+                  onChange={(e) => setFormData({ ...formData, bannerRussianUrl: e.target.value })}
                 />
                 <input
                   type="text"

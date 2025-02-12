@@ -228,7 +228,7 @@ i18nCountries.registerLocale(ruCountry);
         // Reload the page after a timeout
         setTimeout(() => {
           window.location.reload();
-        }, 2000); // Adjust the delay (in milliseconds) as needed
+        }, 4000); // Adjust the delay (in milliseconds) as needed
       })
       .catch((error) => {
         // Check for specific error codes and show a more informative message
@@ -451,28 +451,17 @@ i18nCountries.registerLocale(ruCountry);
                         (registeredWebinar) => registeredWebinar.id === event.id
                       );
 
-                      return (
-                        <div
-                          key={event.id}
-                          onClick={(e) => {
-                            if (!e.target.closest(".event-buttons-container")) {
-                              window.open(
-                                event.eventSiteURL || "https://www.eafo.info/",
-                                "_blank"
-                              );
-                            }
-                          }}
-                          style={{ cursor: "pointer" }}
-                          className="event-tile"
-                        >
-                          {/* Banner Section */}
-                          <div className="event-banner">
-                            <img
-                              src={event.bannerUrl}
-                              alt="Event Banner"
-                              className="banner-image"
-                            />
-                          </div>
+                    return (
+                      <div key={event.id} className="event-tile">
+                        {/* Banner Section */}
+
+                        <div className="event-banner">
+                          <img
+                            src={event.bannerUrl}
+                            alt="Event Banner"
+                            className="banner-image"
+                          />
+                        </div>
 
                           {/* Event Content */}
                           <div className="event-info-container">
@@ -499,15 +488,13 @@ i18nCountries.registerLocale(ruCountry);
                                 </span>
                               </div>
 
-                              <div className="event-date-time">
-                                <span>
-                                  {t("dashboard.date")}:{" "}
-                                  {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
-                                  {t("dashboard.time")}: {event.time}{" "}
-                                  (Timezone:Moscow, Russia (GMT+3))
-                                </span>
-                              </div>
+                            <div className="event-date-time">
+                              <span>
+                                {t("dashboard.date")}: {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
+                                {t("dashboard.time")}: {event.time} (Timezone:Moscow, Russia (GMT+3))
+                              </span>
                             </div>
+                          </div>
 
                             <div className="event-buttons-container">
                               <button
@@ -547,39 +534,28 @@ i18nCountries.registerLocale(ruCountry);
                             </div>
                           </div>
                         </div>
-                      );
-                    })}
-                  </div>
-                ) : selectedEventCategory === "Courses" ? (
-                  <div className="event-list">
-                    <div className="event-list">
-                      <p>{t("dashboard.comingSoon")}</p>{" "}
-                      {/* Show "Coming Soon" for future implementation */}
-                    </div>
-                  </div>
-                ) : selectedEventCategory === "Registered" ? (
-                  <div className="event-list">
-                    {filteredEvents("Registered").map((event) => (
-                      <div
-                        key={event.id}
-                        onClick={(e) => {
-                          if (!e.target.closest(".event-buttons-container")) {
-                            window.open(
-                              event.eventSiteURL || "https://www.eafo.info/",
-                              "_blank"
-                            );
-                          }
-                        }}
-                        style={{ cursor: "pointer" }}
-                        className="event-tile"
-                      >
-                        <div className="event-banner">
-                          <img
-                            src={event.bannerUrl}
-                            alt="Event Banner"
-                            className="banner-image"
-                          />
-                        </div>
+
+                        {/* Action Buttons */}
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : selectedEventCategory === "Courses" ? (
+                <div className="event-list">
+                  <p>{t("dashboard.noCoursesAvailable")}</p>
+                </div>
+              ) : selectedEventCategory === "Registered" ? (
+                <div className="event-list">
+                  {getRegisteredWebinars().map((event) => (
+                    <div key={event.id} className="event-tile">
+                      {/* Banner Section */}
+                      <div className="event-banner">
+                        <img
+                          src={event.bannerUrl}
+                          alt="Event Banner"
+                          className="banner-image"
+                        />
+                      </div>
 
                         <div className="event-info-container">
                           <div className="event-content">
@@ -605,14 +581,11 @@ i18nCountries.registerLocale(ruCountry);
                               </span>
                             </div>
 
-                            <div className="event-date-time">
-                              <span>
-                                {t("dashboard.date")}:{" "}
-                                {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
-                                {t("dashboard.time")}: {event.time}{" "}
-                                (Timezone:Moscow, Russia (GMT+3))
-                              </span>
-                            </div>
+                          <div className="event-date-time">
+                            <span>
+                              {t("dashboard.date")}: {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
+                              {t("dashboard.time")}: {event.time} (Timezone:Moscow, Russia (GMT+3))
+                            </span>
                           </div>
 
                           <div className="event-buttons-container">

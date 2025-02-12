@@ -5,15 +5,6 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
-import Select from "react-select";
-import i18nCountries from "i18n-iso-countries";
-import "react-datepicker/dist/react-datepicker.css";
-import { registerLocale } from "react-datepicker";
-import enDate from "date-fns/locale/en-US";
-import ruDate from "date-fns/locale/ru";
-
-// Import country language data
-
 import "react-phone-input-2/lib/style.css"; // Importing styles for PhoneInput
 
 import {
@@ -36,18 +27,7 @@ const RegisterPage = () => {
   const { t , i18n} = useTranslation(); // Use the translation function
   const selectedLanguage = i18n.language; 
   const [columnsToShow, setColumnsToShow] = useState(7);
-  const [confirmEmailError, setConfirmEmailError] = useState(false);
-  const [countryOptions, setCountryOptions] = useState([]);  
-  const navigate = useNavigate();
-    const formRef = useRef(null);
-    useEffect(() => {
-      if (formRef.current) {
-        formRef.current.scrollTop = 0; // Scroll form container to top
-      }
-    }, []); // Runs only once when the component mounts
-  
-    registerLocale("en", enDate);
-registerLocale("ru", ruDate);
+    const navigate = useNavigate();
   
   const [formData, setFormData] = useState({
     title: "",
@@ -259,7 +239,7 @@ useEffect(() => {
   
         setTimeout(() => {
           navigate("/"); // Navigate to home page after timeout
-        }, 2000);
+        }, 3000);
         
       } else {
         const contentType = response.headers.get("content-type");
