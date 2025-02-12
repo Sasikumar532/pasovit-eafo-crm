@@ -97,6 +97,7 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
   const baseUrl = import.meta.env.VITE_BASE_URL;
   const navigate = useNavigate();
   const [webinars, setWebinars] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); // Track the search query
   const [formData, setFormData] = useState({
     title: "",
     titleRussian: "",
@@ -279,6 +280,12 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
       toast.error(translations[selectedLanguage].errorDeletingWebinar);
     }
   };
+
+   // Filter webinars based on the search query
+   const filteredWebinars = webinars.filter((webinar) =>
+    webinar.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   
 
   return (
@@ -313,30 +320,42 @@ const WebinarManagement = ({ selectedLanguage = "English" }) => {
         </button>
       </div>
 
-      <div className="webinar-list-container">
-        <ul className="webinar-list">
-          {webinars.map((webinar) => (
-            <li key={webinar.id} className="webinar-list-item">
-              <div className="webinar-first-div">
-                <div className="webinar-banner">
-                  <img src={webinar.bannerUrl} alt={webinar.title} />
-                </div>
-                <div className="webinar-details">
-                  <h3>{webinar.title}</h3>
-                  <p>
-                    <strong>{translations[selectedLanguage].date}:</strong> {formatDate(webinar.date)} <br />
-                    <strong>{translations[selectedLanguage].time}:</strong> {webinar.time}
-                  </p>
-                </div>
-              </div>
+      <div className="search-container">
+        <input
+          type="text"
+          className="search-bar"
+          placeholder={selectedLanguage === "Russian" ? "Поиск вебинаров..." : "Search webinars..."}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)} // Update search query
+        />
+      </div>
 
-              <div className="webinar-actions">
-                <button onClick={() => handleEdit(webinar)} className="edit">{translations[selectedLanguage].edit}</button>
-                <button onClick={() => handleDelete(webinar.id)} className="delete">{translations[selectedLanguage].delete}</button>
+      <div className="webinar-list-container">
+       
+      <ul className="webinar-list">
+        {filteredWebinars.map((webinar) => (
+          <li key={webinar.id} className="webinar-list-item">
+            <div className="webinar-first-div">
+              <div className="webinar-banner">
+                <img src={webinar.bannerUrl} alt={webinar.title} />
               </div>
-            </li>
-          ))}
-        </ul>
+              <div className="webinar-details">
+                <h3>{selectedLanguage === "Russian" ? webinar.titleRussian : webinar.title}</h3>
+                
+                <p>
+                  <strong>{translations[selectedLanguage].date}:</strong> {formatDate(webinar.date)} <br />
+                  <strong>{translations[selectedLanguage].time}:</strong> {webinar.time}
+                </p>
+              </div>
+            </div>
+
+            <div className="webinar-actions">
+              <button onClick={() => handleEdit(webinar)} className="edit">{translations[selectedLanguage].edit}</button>
+              <button onClick={() => handleDelete(webinar.id)} className="delete">{translations[selectedLanguage].delete}</button>
+            </div>
+          </li>
+        ))}
+      </ul>
       </div>
 
       {isModalOpen && (

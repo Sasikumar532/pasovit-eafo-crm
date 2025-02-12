@@ -127,7 +127,7 @@
   margin-bottom:8px;
   font-weight: bold;
   color: #333;
-  text-transform: capitalize;
+
 }
 
 .detail-item  input {
@@ -145,6 +145,16 @@ input:disabled {
 
 input:not(:disabled) {
   background-color: #fff; /* Normal editable fields */
+}
+.detail-item select {
+  width: 100%; /* Full width */
+  padding: 8px; /* Space inside */
+  font-size: 16px; /* Readable text */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  background-color: #fff; /* White background */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease;
 }
 
 /* Add these styles to your Dashboard.css */
@@ -432,6 +442,7 @@ input:not(:disabled) {
 }
 
 
+
 /* Styling for Event Category Heading */
 .events-heading h3 {
   font-size: 24px;
@@ -551,6 +562,19 @@ input:not(:disabled) {
   }
   .event-tile{
     flex-direction: column;
+  }
+  .event-category-bar button {
+    
+    font-size: 14px;
+    padding: 5px 5px;
+    cursor: pointer;
+
+  }
+  .event-category-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 20px 0;
   }
 }
 

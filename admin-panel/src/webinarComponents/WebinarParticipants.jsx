@@ -138,7 +138,9 @@ const WebinarParticipants = ({ selectedLanguage = "English" }) => {
         <h1 className="navbar-heading">
           {translations[selectedLanguage].title.replace("{webinarTitle}", webinarTitle)}
         </h1>
-        <div className="search-container">
+      </div>
+
+      <div className="search-container">
           <div className="search-bar-wrapper">
             <p>
               <strong>{translations[selectedLanguage].search}</strong>
@@ -153,7 +155,6 @@ const WebinarParticipants = ({ selectedLanguage = "English" }) => {
             />
           </div>
         </div>
-      </div>
 
       {/* Main Content */}
       <div className="main-content">

@@ -58,7 +58,7 @@
   .user-details-card {
     margin-top: 20px;
     background-color: white;
-    padding: 60px 60px;
+    padding: 60px 60px 20px 60px;
     max-width: 1400px;
     align-items: center;
     justify-content: center;
@@ -145,6 +145,11 @@
   /* Specific styling for "No courses" or "No webinars" messages */
   p {
     color: #6c757d;
+  }
+  .user-delete-button button{
+    background-color: #d81e31;
+    color: white;
+    font-weight: bold;
   }
   
   /* Responsiveness: Stack sections on smaller screens */

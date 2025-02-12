@@ -135,7 +135,8 @@ router.post('/', authenticateJWT, (req, res) => {
   }
 });
 
-router.get('/:webinarId', authenticateJWT, (req, res) => {
+
+router.get("/:webinarId", (req, res) => {
   const { webinarId } = req.params;
 
   try {
@@ -144,13 +145,13 @@ router.get('/:webinarId', authenticateJWT, (req, res) => {
     const webinar = webinars.find((w) => w.id === webinarId);
 
     if (!webinar) {
-      return res.status(404).json({ message: 'Webinar not found' });
+      return res.status(404).json({ message: "Webinar not found" });
     }
 
-    res.json(webinar); // Return the webinar object with both English and Russian fields
+    res.json(webinar); // Return the webinar object
   } catch (error) {
-    console.error('Error fetching webinar:', error);
-    res.status(500).json({ message: 'Error fetching webinar data' });
+    console.error("Error fetching webinar:", error);
+    res.status(500).json({ message: "Error fetching webinar data" });
   }
 });
 

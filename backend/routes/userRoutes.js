@@ -112,10 +112,10 @@ const transporter = nodemailer.createTransport({
 });
 
 // Helper function to send registration confirmation email
-const sendRegistrationEmail = (email, country, firstName, lastName, middleName, salutation) => {
+const sendRegistrationEmail = (email, dashboardLang, firstName, lastName, middleName, salutation) => {
   // Adjust name order based on country
   const fullName =
-    country === "Russia"
+  dashboardLang.toLowerCase() === "ru"
       ? `${firstName} ${middleName}`
       : `${firstName} ${middleName} ${lastName}`;
 
@@ -180,10 +180,10 @@ const sendRegistrationEmail = (email, country, firstName, lastName, middleName, 
 
   // Select template based on the country (case-insensitive check for "Russia")
   const selectedTemplate =
-    country.toLowerCase() === "russia" ? russianTemplate : englishTemplate;
+  dashboardLang.toLowerCase() === "ru" ? russianTemplate : englishTemplate;
 
   const subject =
-    country.toLowerCase() === "russia" ? "Личный кабинет EAFO" : "Registration Confirmation – Personal Account";
+  dashboardLang.toLowerCase() === "ru" ? "Личный кабинет EAFO" : "Registration Confirmation – Personal Account";
 
   // Mail options
   const mailOptions = {
@@ -213,7 +213,7 @@ const sendWebinarRegistrationEmail = (
   webinarDate,
   webinarChiefGuest,
   regalia,
-  country,
+  dashboardLang,
   firstName,
   lastName,
   middleName,
@@ -240,7 +240,7 @@ const sendWebinarRegistrationEmail = (
     <p><a href="${process.env.APP_URL}">Войти в личный кабинет</a></p>
 
     <p>В случае возникновения любых вопросов, пожалуйста, свяжитесь с нашей службой технической поддержки по адресу: 
-      <a href="mailto:info@eafo.info">info@eafo.info</a>
+      <a href="mailto:support@eafo.info">info@eafo.info</a>
     </p>
 
     <footer>
@@ -268,7 +268,7 @@ const sendWebinarRegistrationEmail = (
     <p><a href="${process.env.APP_URL}">Login Link</a></p>
 
     <p>If you have any questions, please contact our technical support team at:</p>
-    <p><a href="mailto:info@eafo.info">info@eafo.info</a></p>
+    <p><a href="mailto:support@eafo.info">info@eafo.info</a></p>
 
     <footer>
       <p>Best regards,</p>
@@ -341,7 +341,7 @@ router.post("/", async (req, res) => {
       .json({ message: `User registered successfully as ${role}.` });
     sendRegistrationEmail(
       newUser.email,
-      newUser.country,
+      newUser.dashboardLang,
       newUser.firstName,
       newUser.lastName,
       newUser.middleName,
@@ -553,7 +553,7 @@ router.put("/:email", authenticateJWT, (req, res) => {
       writeWebinarsToFile(webinars); // Save updated webinar data
 
       // Send the email after successful registration
-      const isUserFromRussia = user.country?.toLowerCase() === "russia";
+      const isUserFromRussia = user.dashboardLang?.toLowerCase() === "ru";
       const webinarTitle = isUserFromRussia ? webinar.titleRussian : webinar.title;
       const chiefGuestName = isUserFromRussia ? webinar.chiefGuestNameRussian : webinar.chiefGuestName;
       const regalia = isUserFromRussia ? webinar.regaliaRussian : webinar.regalia;
@@ -568,7 +568,7 @@ router.put("/:email", authenticateJWT, (req, res) => {
         formattedDate, // Webinar date
         chiefGuestName, // Chief guest's name based on language
         regalia, // Regalia of the guest based on language
-        user.country, // User's country
+        user.dashboardLang, // User's country
         user.firstName, // User's first name
         user.middleName, // User's middle name
         user.lastName, // User's last name
@@ -586,13 +586,6 @@ router.put("/:email", authenticateJWT, (req, res) => {
 
   return res.status(403).json({ message: "You are not authorized to update this user's details." });
 });
-
-
-
-
-
-
-
 
 
 // Profile image upload route
@@ -629,5 +622,10 @@ router.post(
     }
   }
 );
+
+
+
+
+
 
 module.exports = router;
