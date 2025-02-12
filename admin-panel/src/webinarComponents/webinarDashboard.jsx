@@ -6,26 +6,27 @@ import { toast, ToastContainer } from "react-toastify";
 
 const WebinarDashboard = ({ selectedLanguage }) => {
   const [webinars, setWebinars] = useState([]);
+  const [searchQuery, setSearchQuery] = useState(""); // Track the search query
+  const [isLoading, setIsLoading] = useState(true); // Loading state
   const navigate = useNavigate();
   const baseUrl = import.meta.env.VITE_BASE_URL;
 
   const fetchWebinars = async () => {
     try {
-      // Retrieve the token from localStorage or context (depending on where you store it)
       const token = localStorage.getItem('token'); // Or from context/store if applicable
-  
+
       const response = await fetch(`${baseUrl}/api/webinars`, {
         method: 'GET',
         headers: {
-          'Authorization': `Bearer ${token}`, // Add token to the Authorization header
+          'Authorization': `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
       });
-  
+
       if (!response.ok) {
         throw new Error('Failed to fetch webinars');
       }
-  
+
       const data = await response.json();
       setWebinars(data); // Store webinars data
     } catch (error) {
@@ -35,9 +36,10 @@ const WebinarDashboard = ({ selectedLanguage }) => {
           ? "Ошибка при получении данных вебинара"
           : "Error fetching webinars"
       );
+    } finally {
+      setIsLoading(false); // Stop loading after fetching is done
     }
   };
-  
 
   useEffect(() => {
     fetchWebinars();
@@ -46,6 +48,11 @@ const WebinarDashboard = ({ selectedLanguage }) => {
   const handleWebinarClick = (webinarId) => {
     navigate(`/webinar-dashboard/${webinarId}/webinar-participants`);
   };
+
+  // Filter webinars based on the search query
+  const filteredWebinars = webinars.filter((webinar) =>
+    webinar.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <div className="webinar-dashboard-container">
@@ -58,56 +65,80 @@ const WebinarDashboard = ({ selectedLanguage }) => {
         </h2>
       </div>
 
+      {/* Search Bar */}
+      <div className="search-container">
+        <input
+          type="text"
+          className="search-bar"
+          placeholder={selectedLanguage === "Russian" ? "Поиск вебинаров..." : "Search webinars..."}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)} // Update search query
+        />
+      </div>
+
       {/* Webinars List */}
       <div className="webinar-grid">
-        {webinars.map((webinar) => (
-          <div
-            key={webinar.id}
-            className="webinar-dashboard-webinar-card"
-            onClick={() => handleWebinarClick(webinar.id)}
-          >
-            {/* Webinar Details */}
-            <div className="webinar-details-container">
-              <div className="webinar-image">
-                <img src={webinar.bannerUrl} alt={`${webinar.title} banner`} />
+        {isLoading ? (
+          <div className="loading-spinner">Loading...</div>
+        ) : filteredWebinars.length === 0 ? (
+          <p>{selectedLanguage === "Russian" ? "Нет вебинаров" : "No webinars available"}</p>
+        ) : (
+          filteredWebinars.map((webinar) => (
+            <div
+              key={webinar.id}
+              className="webinar-dashboard-webinar-card"
+              onClick={() => handleWebinarClick(webinar.id)}
+            >
+              {/* Webinar Details */}
+
+
+            
+              <div className="webinar-details-container">
+                <div className="webinar-image">
+                  <img src={selectedLanguage==="Russian"? webinar.bannerRussianUrl:webinar.bannerURl} alt={`${webinar.title} banner`} />
+                </div>
+                <div className="webinar-info">
+                  <h2 className="webinar-title">{selectedLanguage === "Russian" ? webinar.titleRussian : webinar.title}</h2>
+                  <div className="webinar-time" style={{ display: "flex" }}>
+                    <p className="webinar-details">
+                      <strong>
+                        {selectedLanguage === "Russian" ? "Дата:" : "Date:"}
+                      </strong>{" "}
+                      {webinar.date}
+                    </p>
+                    <p className="webinar-details">
+                      <strong>
+                        {selectedLanguage === "Russian" ? "Время:" : "Time:"}
+                      </strong>{" "}
+                      {webinar.time}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="webinar-info">
-                <h2 className="webinar-title">{webinar.title}</h2>
-                <div className="webinar-time" style={{ display: "flex" }}>
-                  <p className="webinar-details">
-                    <strong>
-                      {selectedLanguage === "Russian" ? "Дата:" : "Date:"}
-                    </strong>{" "}
-                    {webinar.date}
+
+              {/* Registration Stats */}
+              <div className="webinar-stats-container">
+                <div className="stats-box">
+                  <p className="stats-number">
+                    {webinar.participants?.length || 0}
                   </p>
-                  <p className="webinar-details">
-                    <strong>
-                      {selectedLanguage === "Russian" ? "Время:" : "Time:"}
-                    </strong>{" "}
-                    {webinar.time}
+                  <p className="stats-label">
+                    {selectedLanguage === "Russian"
+                      ? "Всего регистраций"
+                      : "Total Registrations"}
                   </p>
                 </div>
               </div>
             </div>
-
-            {/* Registration Stats */}
-            <div className="webinar-stats-container">
-              <div className="stats-box">
-                <p className="stats-number">
-                  {webinar.participants?.length || 0}
-                </p>
-                <p className="stats-label">
-                  {selectedLanguage === "Russian"
-                    ? "Всего регистраций"
-                    : "Total Registrations"}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
+          ))
+        )}
       </div>
+
+      {/* Toast Container */}
+      <ToastContainer />
     </div>
   );
 };
 
 export default WebinarDashboard;
+

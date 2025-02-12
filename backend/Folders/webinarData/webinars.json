@@ -1,75 +1,355 @@
 [
   {
-    "webinarId": "00001",
-    "webinarNumber": 1,
-    "id": "f0fea90e-ec12-4eb3-b1a6-6c800b42e656",
-    "title": "Advancements in Medical Oncology: Innovations in Cancer Treatment",
-    "titleRussian": "Достижения в медицинской онкологии: Инновации в лечении рака",
-    "date": "2025-01-29",
-    "time": "00:05",
-    "liveEmbed": "https://kinescope.io/embed/82LqdaoT1ugEq3BuZR4vme",
-    "recordingEmbed": "",
-    "chatEmbed": "https://kinescope.io/chat/82LqdaoT1ugEq3BuZR4vme",
-    "bannerUrl": "https://static.wixstatic.com/media/df6cc5_bbf95777ee19434597595eaccf19fde4~mv2.jpg",
-    "chiefGuestName": "Dr. Elena Petrova, Leading Researcher in Cancer Immunotherapy",
-    "chiefGuestNameRussian": "Доктор Елена Петрова, Ведущий исследователь в области иммунотерапии рака",
+    "webinarId": "00002",
+    "webinarNumber": 2,
+    "id": "9e59dde3-650c-464c-962c-ecd4189fef78",
+    "title": "Introduction to Molecular Oncology",
+    "titleRussian": "Введение в молекулярную онкологию",
+    "date": "2025-02-04",
+    "dayOfWeek": "Tuesday",
+    "dayOfWeekRussian": "Вторник",
+    "time": "10:00",
+    "liveEmbed": "https://kinescope.io/embed/5t9h8GDCEdwfDDBJtC7VXq",
+    "eventSiteURL": "http://basic.eafo.info/",
+    "chatEmbed": "",
+    "bannerUrl": "https://static.wixstatic.com/media/df6cc5_1f62cd1cfd7f41d8903ec23d8d16a844~mv2.png",
+    "bannerRussianURL": "https://static.wixstatic.com/media/df6cc5_3d1b0b59320548d0be51b831797c7df1~mv2.png",
+    "chiefGuestName": "DRUY Aleksandr, MD, PhD",
+    "chiefGuestNameRussian": "ДРУЙ Александр Евгеньевич",
     "photoUrl": "",
-    "description": "",
-    "descriptionRussian": "",
+    "regalia": "Chief, Laboratory of Molecular Oncology, Dmitry Rogachev National Medical Research Center for Pediatric Hematology, Oncology and Immunology, Moscow, Russia",
+    "regaliaRussian": "к.м.н., врач клинической лабораторной диагностики, \nзаведующий лабораторией молекулярной онкологии, \nНациональный медицинский исследовательский центр\nдетской гематологии, онкологии и иммунологии им. Дмитрия Рогачева, \nМосква, Российская Федерация",
     "participants": [
       {
+        "email": "theva.prime@gmail.com",
+        "registered at": "2025-02-02T07:26:43.413Z"
+      },
+      {
         "email": "sasinarayanan2003@gmail.com",
-        "registered at": "2025-01-28T18:18:50.128Z"
+        "registered at": "2025-02-02T09:10:25.712Z"
+      },
+      {
+        "email": "katykasatkina@gmail.com",
+        "registered at": "2025-02-03T09:15:30.340Z"
+      },
+      {
+        "email": "islamudin.aldanov@gmail.com",
+        "registered at": "2025-02-03T14:08:13.764Z"
+      },
+      {
+        "email": "marin.petrenko75@gmail.com",
+        "registered at": "2025-02-03T15:36:48.460Z"
+      },
+      {
+        "email": "surzhik.snezhana@mail.ru",
+        "registered at": "2025-02-03T15:44:26.863Z"
+      },
+      {
+        "email": "svetasevcova78@gmail.com",
+        "registered at": "2025-02-03T15:53:33.926Z"
+      },
+      {
+        "email": "LenaD200016@gmail.com",
+        "registered at": "2025-02-03T15:57:36.279Z"
+      },
+      {
+        "email": "t-e-bondarenko@mail.ru",
+        "registered at": "2025-02-03T16:07:44.460Z"
+      },
+      {
+        "email": "liza.kosharnaya@mail.ru",
+        "registered at": "2025-02-03T16:14:50.940Z"
+      },
+      {
+        "email": "emilya.zabbarova@mail.ru",
+        "registered at": "2025-02-03T16:18:37.649Z"
+      },
+      {
+        "email": "angelateddy@mail.ru",
+        "registered at": "2025-02-03T16:19:49.489Z"
+      },
+      {
+        "email": "eva-korotkova97@mail.ru",
+        "registered at": "2025-02-03T16:20:15.042Z"
+      },
+      {
+        "email": "sofya.kamilovskaya@yandex.ru",
+        "registered at": "2025-02-03T16:22:39.560Z"
+      },
+      {
+        "email": "KsenyaGL@yandex.ru",
+        "registered at": "2025-02-03T16:24:35.720Z"
+      },
+      {
+        "email": "katarina.200224@mail.ru",
+        "registered at": "2025-02-03T16:34:10.947Z"
+      },
+      {
+        "email": "vitalina2809@bk.ru",
+        "registered at": "2025-02-03T16:47:43.804Z"
+      },
+      {
+        "email": "belkina1999@internet.ru",
+        "registered at": "2025-02-03T16:50:44.006Z"
+      },
+      {
+        "email": "nik.malcev.91@bk.ru",
+        "registered at": "2025-02-03T17:02:37.272Z"
+      },
+      {
+        "email": "grigorievarthur@icloud.com",
+        "registered at": "2025-02-03T17:07:55.196Z"
+      },
+      {
+        "email": "revunova-2011@mail.ru",
+        "registered at": "2025-02-03T17:11:25.236Z"
+      },
+      {
+        "email": "mortal1-1999@mail.ru",
+        "registered at": "2025-02-03T17:22:24.710Z"
+      },
+      {
+        "email": "danya.andronaki@mail.ru",
+        "registered at": "2025-02-03T17:28:00.640Z"
+      },
+      {
+        "email": "malikadzh00@mail.ru",
+        "registered at": "2025-02-03T17:52:26.584Z"
+      },
+      {
+        "email": "sofiagodoborsheva@mail.ru",
+        "registered at": "2025-02-03T17:55:39.694Z"
+      },
+      {
+        "email": "tilerlina@mail.ru",
+        "registered at": "2025-02-03T18:05:15.092Z"
+      },
+      {
+        "email": "ss.snowflake@yandex.ru",
+        "registered at": "2025-02-03T18:06:23.953Z"
+      },
+      {
+        "email": "workwithsk2@gmail.com",
+        "registered at": "2025-02-03T18:10:23.026Z"
+      },
+      {
+        "email": "merz8585@mail.ru",
+        "registered at": "2025-02-03T18:18:50.291Z"
+      },
+      {
+        "email": "viktoriasaksina01@gmail.com",
+        "registered at": "2025-02-03T18:21:28.070Z"
+      },
+      {
+        "email": "molnar.nik@mail.ru",
+        "registered at": "2025-02-03T18:27:55.235Z"
+      },
+      {
+        "email": "yuliy-kotelevskay@yandex.ru",
+        "registered at": "2025-02-03T18:32:01.241Z"
+      },
+      {
+        "email": "27days-ss@mail.ru",
+        "registered at": "2025-02-03T18:36:54.035Z"
+      },
+      {
+        "email": "beata.ilina@yandex.ru",
+        "registered at": "2025-02-03T18:42:29.200Z"
+      },
+      {
+        "email": "drsoma@gmail.com",
+        "registered at": "2025-02-03T18:51:11.590Z"
+      },
+      {
+        "email": "pkruglova19@gmail.com",
+        "registered at": "2025-02-03T19:12:45.135Z"
+      },
+      {
+        "email": "sinchugov.sy@gmail.com",
+        "registered at": "2025-02-03T19:18:05.281Z"
+      },
+      {
+        "email": "less.d@mail.ru",
+        "registered at": "2025-02-03T19:27:40.783Z"
+      },
+      {
+        "email": "milaevadara339@gmail.com",
+        "registered at": "2025-02-03T19:40:22.152Z"
+      },
+      {
+        "email": "u_melnyk@mail.ru",
+        "registered at": "2025-02-03T19:44:00.992Z"
+      },
+      {
+        "email": "yevgeniya.suranova@gmail.com",
+        "registered at": "2025-02-03T19:58:43.807Z"
+      },
+      {
+        "email": "tisoan@yandex.ru",
+        "registered at": "2025-02-03T20:01:44.688Z"
+      },
+      {
+        "email": "s_i_17@mail.ru",
+        "registered at": "2025-02-03T20:10:45.648Z"
+      },
+      {
+        "email": "tolmacheva.af@gmail.com",
+        "registered at": "2025-02-03T20:42:28.711Z"
+      },
+      {
+        "email": "gony280898@gmail.com",
+        "registered at": "2025-02-03T20:43:28.246Z"
+      },
+      {
+        "email": "irinabogatova@internet.ru",
+        "registered at": "2025-02-03T21:05:59.211Z"
+      },
+      {
+        "email": "kirill_bazhenov.1995@mail.ru",
+        "registered at": "2025-02-03T21:21:11.803Z"
+      },
+      {
+        "email": "kam.orisheva@gmail.com",
+        "registered at": "2025-02-03T22:03:53.622Z"
+      },
+      {
+        "email": "vf21kdzl@mail.ru",
+        "registered at": "2025-02-03T23:00:54.591Z"
+      },
+      {
+        "email": "yakovleva.katharina@mail.ru",
+        "registered at": "2025-02-03T23:43:57.233Z"
+      },
+      {
+        "email": "shein-ledenez@mail.ru",
+        "registered at": "2025-02-04T00:20:32.679Z"
+      },
+      {
+        "email": "m.bislanovna@yandex.ru",
+        "registered at": "2025-02-04T04:04:54.434Z"
+      },
+      {
+        "email": "annasahedova38@gmail.com",
+        "registered at": "2025-02-04T04:11:38.272Z"
+      },
+      {
+        "email": "irina.parshenkova@bk.ru",
+        "registered at": "2025-02-04T04:20:13.454Z"
+      },
+      {
+        "email": "chgu-therapy@mail.ru",
+        "registered at": "2025-02-04T04:33:10.882Z"
+      },
+      {
+        "email": "aigesh.kudya@gmail.com",
+        "registered at": "2025-02-04T06:17:46.308Z"
+      },
+      {
+        "email": "mariko-v@mail.ru",
+        "registered at": "2025-02-04T06:34:57.123Z"
+      },
+      {
+        "email": "taibovaregina@gmail.com",
+        "registered at": "2025-02-04T06:58:37.098Z"
+      },
+      {
+        "email": "3kate4ka@mail.ru",
+        "registered at": "2025-02-04T07:31:36.231Z"
       }
     ]
   },
   {
     "webinarId": "00002",
     "webinarNumber": 2,
-    "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
-    "title": "DEMO1",
-    "titleRussian": "DEMO1",
-    "date": "2025-01-31",
-    "time": "11:01",
-    "liveEmbed": "",
-    "recordingEmbed": "",
+    "id": "4bcd02e4-d940-4542-a86c-44c2ad75ac3d",
+    "title": "Molecular Diagnostic Markers in Malignant Neoplasms",
+    "titleRussian": "Молекулярно-диагностические маркеры в онкологии",
+    "date": "2025-02-11",
+    "dayOfWeek": "Tuesday",
+    "dayOfWeekRussian": "Вторник",
+    "time": "10:00",
+    "liveEmbed": "https://kinescope.io/embed/g1fRMgccSUYQBTpK3B6EnV",
+    "eventSiteURL": "http://basic.eafo.info/",
     "chatEmbed": "",
-    "bannerUrl": "",
-    "chiefGuestName": "DEMO1 name en",
-    "chiefGuestNameRussian": "DEMO1 name ru",
+    "bannerUrl": "https://static.wixstatic.com/media/df6cc5_a06d8b35fd8149e4a94747d5a337dc53~mv2.png",
+    "bannerRussianURL": "https://static.wixstatic.com/media/df6cc5_13f93e88ce08478a95a586f6887a1f61~mv2.png",
+    "chiefGuestName": "DRUY Aleksandr, MD, PhD",
+    "chiefGuestNameRussian": "ДРУЙ Александр Евгеньевич",
     "photoUrl": "",
-    "dayOfWeek": "Friday",
-    "regalia": "demo 1 regalia en",
-    "regaliaRussian": "demo 1 regalia ru",
-    "dayOfWeekRussian": "Пятница",
+    "regalia": "Chief, Laboratory of Molecular Oncology, Dmitry Rogachev National Medical Research Center for Pediatric Hematology, Oncology and Immunology, Moscow, Russia",
+    "regaliaRussian": "к.м.н., врач клинической лабораторной диагностики, \nзаведующий лабораторией молекулярной онкологии, \nНациональный медицинский исследовательский центр\nдетской гематологии, онкологии и иммунологии им. Дмитрия Рогачева, \nМосква, Российская Федерация",
     "participants": [
       {
-        "email": "eafofb@gmail.com",
-        "registered at": "2025-01-29T08:49:21.760Z"
+        "email": "theva.prime@gmail.com",
+        "registered at": "2025-02-09T08:02:47.366Z"
       },
       {
-        "email": "sethuinstituteoftechnology2022@gmail.com",
-        "registered at": "2025-01-29T08:52:36.767Z"
+        "email": "pkruglova19@gmail.com",
+        "registered at": "2025-02-09T14:47:14.723Z"
       },
       {
-        "email": "sethuinstituteoftechnology2022@gmail.com",
-        "registered at": "2025-01-29T09:32:13.244Z"
+        "email": "abjuevas@gmail.com",
+        "registered at": "2025-02-09T15:59:09.854Z"
+      },
+      {
+        "email": "dkambarova79@gmail.com",
+        "registered at": "2025-02-09T16:58:30.981Z"
+      },
+      {
+        "email": "annaahmadeeva11@gmail.com",
+        "registered at": "2025-02-09T18:03:08.982Z"
+      },
+      {
+        "email": "LenaD200016@gmail.com",
+        "registered at": "2025-02-10T07:58:54.259Z"
+      },
+      {
+        "email": "mtodasheva07@mail.ru",
+        "registered at": "2025-02-10T12:14:17.054Z"
+      },
+      {
+        "email": "sshuanka@mail.ru",
+        "registered at": "2025-02-10T12:48:05.636Z"
       },
       {
         "email": "sasinarayanan2003@gmail.com",
-        "registered at": "2025-01-29T11:16:09.941Z"
+        "registered at": "2025-02-10T14:30:27.902Z"
       },
       {
-        "email": "sasinarayanan2003@gmail.com",
-        "registered at": "2025-01-29T11:22:46.714Z"
+        "email": "vitalina2809@bk.ru",
+        "registered at": "2025-02-10T15:04:53.214Z"
       },
       {
-        "email": "sasinarayanan2003@gmail.com",
-        "registered at": "2025-01-29T11:27:34.055Z"
+        "email": "m.bislanovna@yandex.ru",
+        "registered at": "2025-02-10T19:46:52.015Z"
       },
       {
-        "email": "sasinarayanan2003@gmail.com",
-        "registered at": "2025-01-29T11:28:15.478Z"
+        "email": "islamudin.aldanov@gmail.com",
+        "registered at": "2025-02-10T20:02:00.769Z"
+      },
+      {
+        "email": "aigesh.kudya@gmail.com",
+        "registered at": "2025-02-10T20:33:47.387Z"
+      },
+      {
+        "email": "vf21kdzl@mail.ru",
+        "registered at": "2025-02-11T01:01:08.618Z"
+      },
+      {
+        "email": "dyba.ekaterina@yandex.ru",
+        "registered at": "2025-02-11T06:18:02.357Z"
+      },
+      {
+        "email": "surzhik.snezhana@mail.ru",
+        "registered at": "2025-02-11T06:56:57.353Z"
+      },
+      {
+        "email": "mariko-v@mail.ru",
+        "registered at": "2025-02-11T07:39:02.968Z"
+      },
+      {
+        "email": "tisoan@yandex.ru",
+        "registered at": "2025-02-11T07:51:02.243Z"
       }
     ]
   }

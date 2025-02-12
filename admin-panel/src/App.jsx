@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import {jwtDecode} from "jwt-decode"; // Import jwt-decode
 import Sidebar from "./components/Sidebar";
 import Dashboard from "./components/Dashboard";
 import FormEntries from "./components/FormEntries";
@@ -18,16 +19,47 @@ const App = () => {
   const [selectedLanguage, setSelectedLanguage] = useState("Russian");
   const [selectedOS, setSelectedOS] = useState("Webinar");
 
-  // Function to verify authentication status
-  const checkAuthentication = () => {
+  // ✅ Function to check if token is still valid
+  const isTokenValid = () => {
     const token = localStorage.getItem("token");
-    const role = localStorage.getItem("role");
-    return token && role === "admin"; // Authentication check
+
+    if (!token) return false; // If no token, return false
+
+    try {
+      const decoded = jwtDecode(token);
+      return decoded.exp > Date.now() / 1000; // Check if token is expired
+    } catch (error) {
+      return false; // If token is invalid, return false
+    }
   };
 
-  // Effect to initialize authentication status
+  // ✅ Function to verify authentication status
+  const checkAuthentication = () => {
+    const role = localStorage.getItem("role");
+
+    if (isTokenValid() && role === "admin") {
+      return true; // User is authenticated
+    } else {
+      localStorage.removeItem("token"); // Remove expired token
+      localStorage.removeItem("role");
+      return false;
+    }
+  };
+
+  // ✅ Effect to handle auto logout when token expires
   useEffect(() => {
     setIsAuthenticated(checkAuthentication());
+
+    // Check token validity every 1 minute
+    const interval = setInterval(() => {
+      if (!isTokenValid()) {
+        setIsAuthenticated(false);
+        localStorage.removeItem("token");
+        localStorage.removeItem("role");
+      }
+    }, 60000); // Check every 60 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 
   return (
@@ -87,10 +119,7 @@ const App = () => {
                 />
 
                 {/* Redirect unmatched routes */}
-                <Route
-                  path="*"
-                  element={<Navigate to="/webinar-dashboard" />}
-                />
+                <Route path="*" element={<Navigate to="/webinar-dashboard" />} />
               </Routes>
             </div>
 
@@ -106,7 +135,13 @@ const App = () => {
             <Routes>
               <Route
                 path="/"
-                element={<AdminLogin setIsAuthenticated={setIsAuthenticated} />}
+                element={
+                  <AdminLogin
+                    setIsAuthenticated={setIsAuthenticated}
+                    setSelectedLanguage={setSelectedLanguage}
+                    selectedLanguage={selectedLanguage}
+                  />
+                }
               />
               {/* Redirect unmatched routes to login */}
               <Route path="*" element={<Navigate to="/" />} />

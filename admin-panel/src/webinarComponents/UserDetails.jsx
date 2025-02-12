@@ -4,7 +4,6 @@ import "./UserDetails.css";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
 
-
 // Translation file
 const translations = {
   English: {
@@ -62,13 +61,14 @@ const translations = {
     loading: "Загрузка...",
     noWebinars: "Нет зарегистрированных вебинаров.",
     noCourses: "Нет доступных курсов.",
-    errorFetchingDetails: "Ошибка загрузки данных пользователя. Повторите попытку.",
-    noPermission: "У вас нет прав на просмотр или редактирование этой страницы.",
+    errorFetchingDetails:
+      "Ошибка загрузки данных пользователя. Повторите попытку.",
+    noPermission:
+      "У вас нет прав на просмотр или редактирование этой страницы.",
   },
 };
 
 const UserDetails = ({ selectedLanguage = "English" }) => {
-
   const baseUrl = import.meta.env.VITE_BASE_URL;
   const { email } = useParams();
   const [userDetails, setUserDetails] = useState(null);
@@ -111,26 +111,26 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
 
   const fetchWebinarDetails = async (webinars) => {
     // Retrieve the token from localStorage
-    const token = localStorage.getItem('token');
-  
+    const token = localStorage.getItem("token");
+
     // If no token is found, handle the error
     if (!token) {
       setError("Token not found. Please log in.");
       return;
     }
-  
+
     for (const webinar of webinars) {
       try {
         const response = await fetch(`${baseUrl}/api/webinars/${webinar.id}`, {
-          method: 'GET',  // HTTP method (default is GET)
+          method: "GET", // HTTP method (default is GET)
           headers: {
-            'Authorization': `Bearer ${token}`,  // Include token in the Authorization header
-            'Content-Type': 'application/json',  // Ensure JSON response handling
+            Authorization: `Bearer ${token}`, // Include token in the Authorization header
+            "Content-Type": "application/json", // Ensure JSON response handling
           },
         });
-  
-        const data = await response.json();  // Parse the JSON response
-  
+
+        const data = await response.json(); // Parse the JSON response
+
         if (response.ok) {
           // Find participant by email and get the registration time
           const participant = data.participants.find(
@@ -146,14 +146,10 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
       } catch (error) {
         // Catch any errors that occur during the fetch operation
         console.error("Error fetching webinar details:", error);
-        setError(error.message);  // Update error state if any
+        setError(error.message); // Update error state if any
       }
     }
   };
-
-
-
-  
 
   useEffect(() => {
     fetchUserDetails();
@@ -200,32 +196,6 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
     }
   };
 
-
-  const deleteUser = async (email) => {
-    try {
-      const response = await fetch(`${baseUrl}/api/user/${email}`, {
-        method: 'DELETE',
-        headers: {
-          Authorization: `Bearer ${token}`, // Pass the JWT token for authentication
-        },
-      });
-  
-      const data = await response.json();
-      if (response.ok) {
-        // Successfully deleted
-        toast.success("User deleted successfully!");
-        // Update UI or perform any additional actions after deletion
-      } else {
-        // Error message from the server
-        toast.error(data.message || "Failed to delete user");
-      }
-    } catch (error) {
-      console.error("Error deleting user:", error);
-      toast.error("An error occurred while deleting the user");
-    }
-  };
-  
-
   const handleCancel = () => {
     setEditedUserDetails(userDetails);
     setIsEditing(false);
@@ -239,7 +209,11 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
   };
 
   if (loading) {
-    return <div className="loading-text">{translations[selectedLanguage].loading}</div>;
+    return (
+      <div className="loading-text">
+        {translations[selectedLanguage].loading}
+      </div>
+    );
   }
 
   if (error) {
@@ -346,13 +320,22 @@ const UserDetails = ({ selectedLanguage = "English" }) => {
               <p>{translations[selectedLanguage].noWebinars}</p>
             )}
           </div>
-
-          
         </div>
       </div>
+
       <ToastContainer />
+      <div className="user-details-card user-delete-button">
+        <button
+          className="delete-user-btn"
+          onClick={() => deleteUser(email)}
+          disabled
+        >
+          Delete User
+        </button>
+      </div>
     </div>
   );
 };
 
 export default UserDetails;
+

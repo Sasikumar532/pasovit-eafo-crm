@@ -5,13 +5,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3.5rem 2rem; /* Adjusted for responsiveness */
+  padding: 3rem 2rem; /* Adjusted for responsiveness */
   background-color: #ffffff;
   font-family: "Roboto", sans-serif;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100000;
 }
 
 .navbar .logo img {
@@ -143,7 +143,7 @@
   }
 
   .navbar {
-    padding: 1rem 1.5rem; /* Adjusted padding for smaller screens */
+    padding: 2rem 1.3rem; /* Adjusted padding for smaller screens */
   }
 }
 

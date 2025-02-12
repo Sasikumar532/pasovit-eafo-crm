@@ -58,15 +58,15 @@ const WebinarPage = () => {
     if (!webinar) return;
 
     const interval = setInterval(() => {
-      const webinarDateTime = new Date(`${webinar.date}T${webinar.time}:00`);
-      const now = new Date();
-
+      let webinarDateTime = new Date(`${webinar.date}T${webinar.time}:00`);
+      
+       const now = new Date();
       if (isNaN(webinarDateTime.getTime())) {
         console.error("Invalid webinar date or time format");
         clearInterval(interval);
         return;
       }
-
+      
       const timeDifference = webinarDateTime - now;
 
       if (timeDifference <= 0) {
@@ -197,3 +197,4 @@ const WebinarPage = () => {
 };
 
 export default WebinarPage;
+

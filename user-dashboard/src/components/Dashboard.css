@@ -127,8 +127,7 @@
   margin-bottom:8px;
   font-weight: bold;
   color: #333;
-  text-transform: capitalize;
-}
+  }
 
 .detail-item  input {
   width: 100%;
@@ -145,6 +144,16 @@ input:disabled {
 
 input:not(:disabled) {
   background-color: #fff; /* Normal editable fields */
+}
+.detail-item select {
+  width: 100%; /* Full width */
+  padding: 8px; /* Space inside */
+  font-size: 16px; /* Readable text */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 5px; /* Slightly rounded corners */
+  background-color: #fff; /* White background */
+  cursor: pointer; /* Pointer on hover */
+  transition: all 0.3s ease;
 }
 
 /* Add these styles to your Dashboard.css */
@@ -251,7 +260,6 @@ input:not(:disabled) {
 }
 .event-category-bar .event-list-item{
   font-size: 16px;
-  padding: 10px 0px;
   border-radius: 30px;
 }
 /* Logout Button Styling */
@@ -367,7 +375,7 @@ input:not(:disabled) {
 /* Footer Section */
 .event-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
 }
@@ -381,7 +389,7 @@ input:not(:disabled) {
 .event-buttons-container {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+ gap: 1rem;
   margin-top: 1rem;
   
 }
@@ -432,6 +440,7 @@ input:not(:disabled) {
 }
 
 
+
 /* Styling for Event Category Heading */
 .events-heading h3 {
   font-size: 24px;
@@ -444,8 +453,8 @@ input:not(:disabled) {
 .event-category-bar {
   display: flex;
   gap: 10px;
-  justify-content: space-between;
   padding: 20px 0;
+justify-content:space-between;
 }
 
 .event-category-bar button {
@@ -458,8 +467,9 @@ input:not(:disabled) {
   font-weight: bold;
   border-radius: 20px;
   transition: background-color 0.3s, color 0.3s;
-  flex: 1;
+ flex:1; 
 }
+
 
 .event-category-bar button:hover {
   background-color: #033672; /* Blue background on hover */
@@ -552,6 +562,45 @@ input:not(:disabled) {
   .event-tile{
     flex-direction: column;
   }
+  .event-category-bar button {
+   
+    font-size: 10px;
+     
+  }
+.event-buttons-container{
+flex-direction:column;
+  
+}
+
+.event-column{
+padding:10px;
+}
+
+}
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Full width */
+  margin: 10px auto; /* Centering */
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.search-icon {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #555;
+}
+
+.search-bar {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px;
+  background: transparent;
 }
 
 .typing-effect {
@@ -566,6 +615,36 @@ input:not(:disabled) {
   white-space: nowrap;
   border-right: .15em solid #033672;
   animation: typing 3s steps(30) 1, blinkCaret 0.75s step-end infinite, erase 3s steps(30) 4s forwards;
+}
+.event-tile:hover{
+  background-color: #f7f7f7;
+}
+.event-lists-container{
+  overflow-y: scroll;
+  max-height: 800px;
+  padding: 10px;
+  border-radius: 10px;
+ 
+}
+
+.event-lists-container::-webkit-scrollbar {
+  width: 8px; /* Small width */
+}
+
+.event-lists-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Light background for the track */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.event-lists-container::-webkit-scrollbar-thumb {
+  background-color: #dcdcdc; /* Light gray color for the thumb */
+  border-radius: 15px; /* Rounded corners for the thumb */
+  border: 2px solid #f1f1f1; /* Light border around the thumb */
+}
+
+/* Optional: Hover effect for thumb */
+.event-lists-container::-webkit-scrollbar-thumb:hover {
+  background-color: #c0c0c0; /* Darken the thumb on hover */
 }
 
 @keyframes typing {
