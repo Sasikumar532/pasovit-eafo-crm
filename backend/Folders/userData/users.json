@@ -14,7 +14,7 @@
     "phone": "916382522736",
     "dob": "2003-04-01",
     "university": "Pasovit Technologies",
-    "department": "Information Technology",
+    "department": "IT",
     "profession": "Employee",
     "position": "Fullstack Developer",
     "gender": "Male",
@@ -3025,5 +3025,28 @@
     "acceptTerms": true,
     "dashboardLang": null,
     "registeredAt": "2025-02-11T19:29:34.366Z"
+  },
+  {
+    "email": "praveen.prime@mail.ru",
+    "password": "$2a$10$ci7.qt/47bhh78NWEVZB6.gWpPVkX9oFxihdiGHahA6qVa44mlUsK",
+    "role": "user",
+    "country": "",
+    "title": "Mr.",
+    "firstName": "Thevarasa",
+    "middleName": "",
+    "lastName": "Praveenan",
+    "confirmEmail": "praveen.prime@mail.ru",
+    "confirmPassword": "Prime@1998",
+    "phone": "94774218063",
+    "dob": "1998-05-09",
+    "university": "EAFO",
+    "department": "IT",
+    "profession": "Tech Admin",
+    "position": "PM",
+    "gender": "Male",
+    "agreePersonalData": true,
+    "acceptTerms": true,
+    "dashboardLang": "en",
+    "registeredAt": "2025-02-12T13:30:33.701Z"
   }
 ]
