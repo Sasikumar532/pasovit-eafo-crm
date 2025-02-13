@@ -1,31 +1,26 @@
 [
   {
-    "email": "sasinarayanan2003@gmail.com",
-    "password": "$2a$10$xT8vZRs5BBHW0MJU7IM9Eev1.xsUZywSsptP0vNM9fFRi6JvR3Ao6",
+    "email": "sitlab2023@gmail.com",
+    "password": "$2a$10$g2wF5/VXX80PqvgXnHbO7usymCEG/mhMarqPXoSVzlhOzZ6f88s8K",
     "role": "user",
-    "country": "Russia",
+    "country": "IN",
     "title": "Mr.",
     "firstName": "Sasikumar",
     "middleName": "",
     "lastName": "N",
+    "confirmEmail": "sitlab2023@gmail.com",
     "confirmPassword": "Sasikumar@2003",
     "phone": "916382522736",
     "dob": "2003-04-01",
-    "university": "Pasovit",
+    "university": "Pasovit Technologies",
     "department": "Information Technology",
     "profession": "Employee",
-    "position": "Developer",
+    "position": "Fullstack Developer",
     "gender": "Male",
     "agreePersonalData": true,
     "acceptTerms": true,
-    "registeredAt": "2025-01-29T07:50:46.229Z",
-    "webinar": [
-      {
-        "id": "ba18f00c-8d54-4ed0-af03-4364bc2be475",
-        "title": "DEMO1",
-        "registered": true
-      }
-    ]
+    "dashboardLang": "en",
+    "registeredAt": "2025-01-31T10:13:39.671Z"
   },
   {
     "email": "sasinarayanan2003@gmail.com",
