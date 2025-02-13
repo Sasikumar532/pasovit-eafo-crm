@@ -1,5 +1,4 @@
 [
-
   {
     "email": "sasinarayanan2003@gmail.com",
     "password": "$2a$10$H/x60WJEx80gE8bOYw0yb.gziS6A0yx8AP1OaDy5xmaOhtKcpZk76",
@@ -17,7 +16,7 @@
     "department": "IT",
     "profession": "Employee",
     "position": "Fullstack Developer",
-    "gender": "Male",
+    "gender": "Female",
     "agreePersonalData": true,
     "acceptTerms": true,
     "dashboardLang": "en",
