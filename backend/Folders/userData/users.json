@@ -1,27 +1,5 @@
 [
-  {
-    "email": "sitlab2023@gmail.com",
-    "password": "$2a$10$g2wF5/VXX80PqvgXnHbO7usymCEG/mhMarqPXoSVzlhOzZ6f88s8K",
-    "role": "user",
-    "country": "IN",
-    "title": "Mr.",
-    "firstName": "Sasikumar",
-    "middleName": "",
-    "lastName": "N",
-    "confirmEmail": "sitlab2023@gmail.com",
-    "confirmPassword": "Sasikumar@2003",
-    "phone": "916382522736",
-    "dob": "2003-04-01",
-    "university": "Pasovit Technologies",
-    "department": "Information Technology",
-    "profession": "Employee",
-    "position": "Fullstack Developer",
-    "gender": "Male",
-    "agreePersonalData": true,
-    "acceptTerms": true,
-    "dashboardLang": "en",
-    "registeredAt": "2025-01-31T10:13:39.671Z"
-  },
+
   {
     "email": "sasinarayanan2003@gmail.com",
     "password": "$2a$10$H/x60WJEx80gE8bOYw0yb.gziS6A0yx8AP1OaDy5xmaOhtKcpZk76",
