@@ -78,7 +78,7 @@ const WebinarDashboard = ({ selectedLanguage }) => {
 
       {/* Webinars List */}
       <div className="webinar-grid">
-        {webinars.map((webinar) => (
+        {filteredWebinars.map((webinar) => (
           <div
             key={webinar.id}
             className="webinar-dashboard-webinar-card"
@@ -108,22 +108,21 @@ const WebinarDashboard = ({ selectedLanguage }) => {
               </div>
             </div>
 
-              {/* Registration Stats */}
-              <div className="webinar-stats-container">
-                <div className="stats-box">
-                  <p className="stats-number">
-                    {webinar.participants?.length || 0}
-                  </p>
-                  <p className="stats-label">
-                    {selectedLanguage === "Russian"
-                      ? "Всего регистраций"
-                      : "Total Registrations"}
-                  </p>
-                </div>
+            {/* Registration Stats */}
+            <div className="webinar-stats-container">
+              <div className="stats-box">
+                <p className="stats-number">
+                  {webinar.participants?.length || 0}
+                </p>
+                <p className="stats-label">
+                  {selectedLanguage === "Russian"
+                    ? "Всего регистраций"
+                    : "Total Registrations"}
+                </p>
               </div>
             </div>
-          ))
-        )}
+          </div>
+        ))}
       </div>
 
       {/* Toast Container */}
@@ -133,4 +132,3 @@ const WebinarDashboard = ({ selectedLanguage }) => {
 };
 
 export default WebinarDashboard;
-

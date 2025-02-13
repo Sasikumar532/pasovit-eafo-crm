@@ -309,6 +309,8 @@ i18nCountries.registerLocale(ruCountry);
       <Navbar />
       <div className="dashboard-container">
         <div className="dashboard-row">
+
+
           <div className="profile-column">
             <div className="profile-container">
               <div className="profile-photo-container">
@@ -405,210 +407,199 @@ i18nCountries.registerLocale(ruCountry);
 
             </div>
           </div>
+
+
+
           <div className="events-column">
-            <div className="events-heading-container">
-              <h3 className="events-heading">{t("dashboard.events")}</h3>
-            </div>
-            <div className="event-category-bar">
-              {Object.keys(eventCounts).map((category) => (
-                <button
-                  key={category}
-                  onClick={() => setSelectedEventCategory(category)}
-                  className={
-                    selectedEventCategory === category
-                      ? "active event-list-item"
-                      : "event-list-item"
-                  }
-                >
-                  {t(`dashboard.${category.toLowerCase()}`)} (
-                  {eventCounts[category]})
-                </button>
-              ))}
-            </div>
-            <div className="event-details">
-              <h3>
-                {t(`dashboard.${selectedEventCategory.toLowerCase()}_details`)}
-              </h3>
+  <div className="events-heading-container">
+    <h3 className="events-heading">{t("dashboard.events")}</h3>
+  </div>
+  <div className="event-category-bar">
+    {Object.keys(eventCounts).map((category) => (
+      <button
+        key={category}
+        onClick={() => setSelectedEventCategory(category)}
+        className={
+          selectedEventCategory === category
+            ? "active event-list-item"
+            : "event-list-item"
+        }
+      >
+        {t(`dashboard.${category.toLowerCase()}`)} ({eventCounts[category]})
+      </button>
+    ))}
+  </div>
+  <div className="event-details">
+    <h3>
+      {t(`dashboard.${selectedEventCategory.toLowerCase()}_details`)}
+    </h3>
 
-              {/* Search Bar */}
-              <div className="search-container">
-                <span className="search-icon">🔍</span>
-                <input
-                  type="text"
-                  className="search-bar"
-                  placeholder={t("dashboard.searchPlaceholder")}
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
+    {/* Search Bar */}
+    <div className="search-container">
+      <span className="search-icon">🔍</span>
+      <input
+        type="text"
+        className="search-bar"
+        placeholder={t("dashboard.searchPlaceholder")}
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+    </div>
 
-              <div className="event-lists-container">
-                {selectedEventCategory === "Webinar" && webinars.length ? (
-                  <div className="event-list">
-                    {filteredEvents("Webinar").map((event) => {
-                      const isClosed = isWebinarClosed(event);
-                      const isRegistered = userDetails?.webinar?.some(
-                        (registeredWebinar) => registeredWebinar.id === event.id
-                      );
+    <div className="event-lists-container">
+      {selectedEventCategory === "Webinar" && webinars.length ? (
+        <div className="event-list">
+          {filteredEvents("Webinar").map((event) => {
+            const isClosed = isWebinarClosed(event);
+            const isRegistered = userDetails?.webinar?.some(
+              (registeredWebinar) => registeredWebinar.id === event.id
+            );
 
-                    return (
-                      <div key={event.id} className="event-tile">
-                        {/* Banner Section */}
-
-                        <div className="event-banner">
-                          <img
-                            src={event.bannerUrl}
-                            alt="Event Banner"
-                            className="banner-image"
-                          />
-                        </div>
-
-                          {/* Event Content */}
-                          <div className="event-info-container">
-                            <div className="event-content">
-                              <h4 className="event-title">
-                                {currentLanguage === "ru"
-                                  ? event.titleRussian
-                                  : event.title}
-                              </h4>
-
-                              <div className="event-expert">
-                                <span className="expert-name">
-                                  {t("dashboard.expert")}:{" "}
-                                  {currentLanguage === "ru"
-                                    ? event.chiefGuestNameRussian
-                                    : event.chiefGuestName}
-                                </span>
-                                <br></br>
-                                <span className="regalia">
-                                  {t("dashboard.regalia")}:{" "}
-                                  {currentLanguage === "ru"
-                                    ? event.regaliaRussian
-                                    : event.regalia}
-                                </span>
-                              </div>
-
-                            <div className="event-date-time">
-                              <span>
-                                {t("dashboard.date")}: {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
-                                {t("dashboard.time")}: {event.time} (Timezone:Moscow, Russia (GMT+3))
-                              </span>
-                            </div>
-                          </div>
-
-                            <div className="event-buttons-container">
-                              <button
-                                onClick={() => {
-                                  if (isRegistered) {
-                                    return;
-                                  }
-                                  if (isClosed) {
-                                    handleWebinarPreview(event.id);
-                                  } else {
-                                    handleRegisterWebinar(
-                                      event.id,
-                                      event.title,
-                                      event.time,
-                                      event.date,
-                                      event.chiefGuestName,
-                                      event.regalia,
-                                      event.dayOfWeek
-                                    );
-                                  }
-                                }}
-                                disabled={isRegistered}
-                                className={
-                                  isClosed
-                                    ? "btn-watch-webinar"
-                                    : isRegistered
-                                    ? "btn-registered"
-                                    : ""
-                                }
-                              >
-                                {isRegistered
-                                  ? t("dashboard.registered")
-                                  : isClosed
-                                  ? t("dashboard.watchWebinar")
-                                  : t("dashboard.register")}
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Action Buttons */}
-                      </div>
-                    );
-                  })}
+            return (
+              <div key={event.id} className="event-tile">
+                {/* Banner Section */}
+                <div className="event-banner">
+                  <img
+                    src={event.bannerUrl}
+                    alt="Event Banner"
+                    className="banner-image"
+                  />
                 </div>
-              ) : selectedEventCategory === "Courses" ? (
-                <div className="event-list">
-                  <p>{t("dashboard.noCoursesAvailable")}</p>
-                </div>
-              ) : selectedEventCategory === "Registered" ? (
-                <div className="event-list">
-                  {getRegisteredWebinars().map((event) => (
-                    <div key={event.id} className="event-tile">
-                      {/* Banner Section */}
-                      <div className="event-banner">
-                        <img
-                          src={event.bannerUrl}
-                          alt="Event Banner"
-                          className="banner-image"
-                        />
-                      </div>
 
-                        <div className="event-info-container">
-                          <div className="event-content">
-                            <h4 className="event-title">
-                              {currentLanguage === "ru"
-                                ? event.titleRussian
-                                : event.title}
-                            </h4>
+                {/* Event Content */}
+                <div className="event-info-container">
+                  <div className="event-content">
+                    <h4 className="event-title">
+                      {currentLanguage === "ru"
+                        ? event.titleRussian
+                        : event.title}
+                    </h4>
 
-                            <div className="event-expert">
-                              <span>
-                                {t("dashboard.expert")}:{" "}
-                                {currentLanguage === "ru"
-                                  ? event.chiefGuestNameRussian
-                                  : event.chiefGuestName}
-                              </span>
-                              <br></br>
-                              <span className="regalia">
-                                {t("dashboard.regalia")}:{" "}
-                                {currentLanguage === "ru"
-                                  ? event.regaliaRussian
-                                  : event.regalia}
-                              </span>
-                            </div>
+                    <div className="event-expert">
+                      <span className="expert-name">
+                        {t("dashboard.expert")}:{" "}
+                        {currentLanguage === "ru"
+                          ? event.chiefGuestNameRussian
+                          : event.chiefGuestName}
+                      </span>
+                      <br />
+                      <span className="regalia">
+                        {t("dashboard.regalia")}:{" "}
+                        {currentLanguage === "ru"
+                          ? event.regaliaRussian
+                          : event.regalia}
+                      </span>
+                    </div>
 
-                          <div className="event-date-time">
-                            <span>
-                              {t("dashboard.date")}: {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
-                              {t("dashboard.time")}: {event.time} (Timezone:Moscow, Russia (GMT+3))
-                            </span>
-                          </div>
-
-                          <div className="event-buttons-container">
-                            <button
-                              className="btn-webinar-link btn-preview"
-                              onClick={() => handleWebinarPreview(event.id)}
-                            >
-                              {t("dashboard.webinar_link")}
-                            </button>
-                            <button className="btn-registered" disabled>
-                              {t("dashboard.registeredButton")}
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
+                    <div className="event-date-time">
+                      <span>
+                        {t("dashboard.date")}:{" "}
+                        {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
+                        {t("dashboard.time")}: {event.time} (Timezone:Moscow, Russia (GMT+3))
+                      </span>
+                    </div>
                   </div>
-                ) : (
-                  <p>{t("dashboard.noEventsAvailable")}</p>
-                )}
+
+                  <div className="event-buttons-container">
+                    <button
+                      onClick={() => {
+                        if (isRegistered) {
+                          return;
+                        }
+                        if (isClosed) {
+                          handleWebinarPreview(event.id);
+                        } else {
+                          handleRegisterWebinar(
+                            event.id,
+                            event.title,
+                            event.time,
+                            event.date,
+                            event.chiefGuestName,
+                            event.regalia,
+                            event.dayOfWeek
+                          );
+                        }
+                      }}
+                      disabled={isRegistered}
+                      className={
+                        isClosed
+                          ? "btn-watch-webinar"
+                          : isRegistered
+                          ? "btn-registered"
+                          : ""
+                      }
+                    >
+                      {isRegistered
+                        ? t("dashboard.registered")
+                        : isClosed
+                        ? t("dashboard.watchWebinar")
+                        : t("dashboard.register")}
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            );
+          })}
+        </div>
+      ) : selectedEventCategory === "Courses" ? (
+        <div className="event-list">
+          <p>{t("dashboard.noCoursesAvailable")}</p>
+        </div>
+      ) : selectedEventCategory === "Registered" ? (
+        <div className="event-list">
+          {getRegisteredWebinars().map((event) => {
+            return (
+              <div key={event.id} className="event-tile">
+                {/* Banner Section */}
+                <div className="event-banner">
+                  <img src={event.bannerUrl} alt="Event Banner" className="banner-image" />
+                </div>
+                <div className="event-info-container">
+                  <div className="event-content">
+                    <h4 className="event-title">
+                      {currentLanguage === "ru" ? event.titleRussian : event.title}
+                    </h4>
+                    <div className="event-expert">
+                      <span className="expert-name">
+                        {t("dashboard.expert")}:{" "}
+                        {currentLanguage === "ru" ? event.chiefGuestNameRussian : event.chiefGuestName}
+                      </span>
+                      <br />
+                      <span className="regalia">
+                        {t("dashboard.regalia")}:{" "}
+                        {currentLanguage === "ru" ? event.regaliaRussian : event.regalia}
+                      </span>
+                    </div>
+                    <div className="event-date-time">
+                      <span>
+                        {t("dashboard.date")}: {format(new Date(event.date), "dd-MM-yyyy")} |{" "}
+                        {t("dashboard.time")}: {event.time} (Timezone:Moscow, Russia (GMT+3))
+                      </span>
+                    </div>
+                  </div>
+                  <div className="event-buttons-container">
+                    <button
+                      className="btn-webinar-link btn-preview"
+                      onClick={() => handleWebinarPreview(event.id)}
+                    >
+                      {t("dashboard.webinar_link")}
+                    </button>
+                    <button className="btn-registered" disabled>
+                      {t("dashboard.registeredButton")}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      ) : null}
+    </div>
+  </div>
+</div>
+
+
+
         </div>
         <button className="logout-button" onClick={handleLogout}>
           {t("dashboard.logout")} <FaSignOutAlt className="logout-icon" />

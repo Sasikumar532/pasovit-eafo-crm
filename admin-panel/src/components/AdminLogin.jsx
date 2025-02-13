@@ -7,6 +7,7 @@ import { FaGlobe, FaSignOutAlt } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css"; // Toast styles
 import "./AdminLogin.css"; // Your CSS file for styling
 import ScrollingComponent from "../webinarComponents/ScrollingComponent";
+import "./Navbar.css";
 
 const translations = {
   English: {
